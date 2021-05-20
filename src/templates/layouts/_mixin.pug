@@ -1,0 +1,8 @@
+// 미사용
+mixin snb__dept-1(dept1, ...dept2s)
+    .dept-1.dept
+        button(type='button')= dept1
+        ul.dept-2
+            each dept2 in dept2s
+                li
+                    a(href="")= dept2

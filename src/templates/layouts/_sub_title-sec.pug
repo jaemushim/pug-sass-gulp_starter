@@ -1,0 +1,19 @@
+block config
+
+// Title
+.title-sec
+    h2.section-title= titleSec_title
+    p.section-subtitle !{titleSec_sub}
+    .right
+        ul
+            li
+                button.copy-link(type="button")
+                    img(src='images/common/icon_link.png' alt='링크복사하기')
+            li
+                button(type="button" onclick="printPage();")
+                    img(src='images/common/icon_printer.png' alt='프린트 하기')
+                    
+        .alert-box.absolute.border-1-ddd.p-10.text-14.text-color-333.bg-color-fff(style="top:63px; width:257px")
+            p 주소가 복사되었습니다.
+                br
+                | 원하는곳에 붙여넣기(Ctrl+V)해주세요.

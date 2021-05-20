@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: light;
+    font-weight: 300;
+    src: url(../fonts/Noto_Sans_KR/NotoSansKR-Light.otf);
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/Noto_Sans_KR/NotoSansKR-Medium.otf);
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: medium;
+    font-weight: 400;
+    src: url(../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf);
+}
+@font-face {
+    font-family: 'Noto Sans KR';
+    font-style: bold;
+    font-weight: 700;
+    src: url(../fonts/Noto_Sans_KR/NotoSansKR-Bold.otf);
+}
+body,
+button,
+select{
+    font-family: 'Noto Sans KR', sans-serif;
+}

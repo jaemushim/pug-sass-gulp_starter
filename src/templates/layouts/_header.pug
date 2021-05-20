@@ -1,0 +1,76 @@
+include _setting
+
+// 헤더
+header
+  // GNB
+  .gnb
+    .container
+      .cf
+        h1.f-left.logo
+          a(href='index.html')
+            img.pc-logo(src='images/logoOn.png' alt='ㅇㅇㅇ회사')
+            img.m-logo(src='images/mLogo.png' alt='ㅇㅇㅇ회사')
+        .f-right
+          .left-dp-2#main-nav
+            ul.dept-1.cf
+              li.m-search-box.block(class='lg:none')
+                .m-search-box__input-wrap
+                  form(action='')
+                    input(type='text' placeholder='검색어를 입력하세요' title="검색어를 입력하세요")
+                    button(type="submit") 검색
+              // 홈은 모바일에서 만 보여짐, newPage 추가시 링크이동 가능 // active 클래스 추가시 dept-2 보여줌
+              li.active.dept-1__item.newPage(class="lg:none")
+                a(href='index.html') 홈
+              each dp1 in menu.dp1
+                li.dept-1__item
+                    a(href=dp1.href)= dp1.name
+                    ul.dept-2-wrap
+                        li
+                            div.dept-2-wrap__left
+                              .box
+                                  span= dp1.name
+                                  p
+                                      | Lorem sdfsdfsd
+                                      img(src='images/main/allmenu_img1.png' alt='')
+                            ul.dept-2
+                                each dp2 in dp1.dp2 ? dp1.dp2 : [] 
+                                    li.dept-2__item(class= dp2.hasNotChild ? "hasNotChild" : '' class= dp2.newPage ? "newPage" : '' )
+                                        if !dp2.newPage
+                                          a(href=dp2.href)= dp2.name
+                                        else 
+                                          a(href=dp2.href target="_blank" title="새창")= dp2.name 
+                                            img.newPage-icon(src='images/common/reuse/m_newPage.png' alt='')
+
+                                        ul.dept-3
+                                          each dp3 in dp2.dp3 ? dp2.dp3 : [] 
+                                            if !dp3.newPage
+                                              li
+                                                a(href=dp3.href)= dp3.name
+                                            else 
+                                              li
+                                                a(href=dp3.href target="_blank" title="새창")= dp3.name
+                                                  img.newPage-icon(src='images/common/reuse/m_newPage.png' alt='')
+              li.dept-1__item.newPage(class='lg:none')
+                a(href='')
+                  | 영문사이트
+          ul.right-dp-2
+            li
+              button.btn-search(type='button')
+                img(src='images/common/reuse/search.png' alt='검색하기')
+              .search-open-wrap.ml-0
+                .input-wrap
+                  form
+                    input(type='text' placeholder='검색어를 입력해주세요' title="검색어를 입력하세요")
+                    button(type="submit")
+                      img(src='images/common/reuse/search_white.png' alt='검색하기')
+            li
+              span.lang
+                button(type="button")
+                  img(src='images/lang.png' alt='언어선택')
+                span.en
+                  a(href='') EN
+            li
+              a.sitemap.none(href='sitemap.html' title='사이트맵으로 이동' class='lg:inline-block')
+                img(src='images/siteMap.png' alt='사이트맵')
+              button.m-ham.absolute.right-15.top-25.lh-normal(type="button" title='모바일 메뉴' class='lg:none')
+                img(src='images/m-ham.png' alt='모바일 메뉴')

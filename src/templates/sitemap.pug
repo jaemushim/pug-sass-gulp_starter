@@ -1,0 +1,46 @@
+extends layouts/_layout
+
+block page-title
+    title 통합검색 | ㅇㅇㅇ회사
+
+block snb__title
+    p.title 통합검색
+
+block config
+    -
+        var pageSort = "sub";
+        var snvLoc = [
+                        {dept1:menu.sitemap.name , dept2:menu.sitemap.dp2},  
+                    ];
+        var titleSec_title = "";
+        var titleSec_sub = "";
+
+block content
+    .sitemap
+        ul.dept-1
+            each dp1 in menu.dp1            
+                li 
+                    a.dept-1__item(href=dp1.href)= dp1.name
+                    ul.dept-2.cf
+                        each dp2 in dp1.dp2 ? dp1.dp2 : []  
+                            li.dept-2__item
+                                if !dp2.newPage
+                                    a.dept-2__item(href=dp2.href)= dp2.name
+                                else
+                                    a.dept-2__item(href=dp2.href)= dp2.name
+                                        img.newPage-icon.ml-10(src='images/common/reuse/newPage.png' alt='')
+                                .line-1-333.mt-12.mb-10
+                                ul.dept-3
+                                    each dp3 in dp2.dp3 ? dp2.dp3 : []
+                                        if !dp3.newPage
+                                            li
+                                                a(href=dp3.href)= dp3.name
+                                        else 
+                                            if !dp3.fontSize
+                                                li
+                                                    a(href=dp3.href)= dp3.name
+                                                        img.newPage-icon.ml-10(src='images/common/reuse/newPage.png' alt='')
+                                            else
+                                                li
+                                                    a.text-15(href=dp3.href)= dp3.name
+                                                        img.newPage-icon.ml-10(src='images/common/reuse/newPage.png' alt='')

@@ -1,0 +1,283 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// ★ Class Making Engine ★ (클래스 생성기)
+@mixin make-class(
+  $class-first-name,
+  $property-name,
+  $list,
+  $breakpoints,
+  $responsive
+) {
+  @if ($responsive == true) {
+    @each $breakpoint-name, $breakpoint-value in $breakpoints {
+      // if xs value = 0
+      @if ($breakpoint-value == 0) {
+        @each $name, $value in $list {
+          @if ($class-first-name) {
+            @if ($value) {
+              @if ($breakpoint-name != "all") {
+                .#{$breakpoint-name}\:#{$class-first-name}-#{$name} {
+                  #{$property-name}: #{$value} !important;
+                }
+              } @else {
+                .#{$class-first-name}-#{$name} {
+                  #{$property-name}: #{$value} !important;
+                }
+              }
+            } @else {
+              @if ($breakpoint-name != "all") {
+                .#{$breakpoint-name}\:#{$class-first-name}-#{$name} {
+                  #{$property-name}: #{$name} !important;
+                }
+              } @else {
+                .#{$class-first-name}-#{$name} {
+                  #{$property-name}: #{$name} !important;
+                }
+              }
+            }
+          } @else {
+            @if ($value) {
+              @if ($breakpoint-name != "all") {
+                .#{$breakpoint-name}\:#{$name} {
+                  #{$property-name}: #{$value} !important;
+                }
+              } @else {
+                .#{$name} {
+                  #{$property-name}: #{$value} !important;
+                }
+              }
+            } @else {
+              @if ($breakpoint-name != "all") {
+                .#{$breakpoint-name}\:#{$name} {
+                  #{$property-name}: #{$name} !important;
+                }
+              } @else {
+                .#{$name} {
+                  #{$property-name}: #{$name} !important;
+                }
+              }
+            }
+          }
+        }
+      }
+      // breakpoint values that not equal to 0
+      @else {
+        @media screen and (min-width: $breakpoint-value) {
+          @each $name, $value in $list {
+            @if ($class-first-name) {
+              @if ($value) {
+                @if ($breakpoint-name != "all") {
+                  .#{$breakpoint-name}\:#{$class-first-name}-#{$name} {
+                    #{$property-name}: #{$value} !important;
+                  }
+                } @else {
+                  .#{$class-first-name}-#{$name} {
+                    #{$property-name}: #{$value} !important;
+                  }
+                }
+              } @else {
+                @if ($breakpoint-name != "all") {
+                  .#{$breakpoint-name}\:#{$class-first-name}-#{$name} {
+                    #{$property-name}: #{$name} !important;
+                  }
+                } @else {
+                  .#{$class-first-name}-#{$name} {
+                    #{$property-name}: #{$name} !important;
+                  }
+                }
+              }
+            } @else {
+              @if ($value) {
+                @if ($breakpoint-name != "all") {
+                  .#{$breakpoint-name}\:#{$name} {
+                    #{$property-name}: #{$value} !important;
+                  }
+                } @else {
+                  .#{$name} {
+                    #{$property-name}: #{$value} !important;
+                  }
+                }
+              } @else {
+                @if ($breakpoint-name != "all") {
+                  .#{$breakpoint-name}\:#{$name} {
+                    #{$property-name}: #{$name} !important;
+                  }
+                } @else {
+                  .#{$name} {
+                    #{$property-name}: #{$name} !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  } @else {
+    @each $name, $value in $list {
+      @if ($class-first-name) {
+        @if ($value) {
+          .#{$class-first-name}-#{$name} {
+            #{$property-name}: #{$value} !important;
+          }
+        } @else {
+          .#{$class-first-name}-#{$name} {
+            #{$property-name}: #{$name} !important;
+          }
+        }
+      } @else {
+        @if ($value) {
+          .#{$name} {
+            #{$property-name}: #{$value} !important;
+          }
+        } @else {
+          .#{$name} {
+            #{$property-name}: #{$name} !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Only For Spacing
+/////////////////////////////////////////////////////////////////////////
+
+@mixin make-space($values, $prefixes, $breakpoints) {
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    // if xs value = 0
+    @if ($breakpoint-value == 0) {
+      @each $attr-short, $attr-long in $prefixes {
+        @if (
+          $attr-short !=
+            "px" and
+            $attr-short !=
+            "py" and
+            $attr-short !=
+            "mx" and
+            $attr-short !=
+            "my"
+        ) {
+          @each $value in $values {
+            @if ($breakpoint-name != "all") {
+              .#{$breakpoint-name}\:#{$attr-short}-#{$value} {
+                #{$attr-long}: #{$value}#{"px"} !important;
+              }
+            } @else {
+              .#{$attr-short}-#{$value} {
+                #{$attr-long}: #{$value}#{"px"} !important;
+              }
+            }
+          }
+        } @else {
+          @each $value in $values {
+            @if ($breakpoint-name != "all") {
+              .#{$breakpoint-name}\:#{$attr-short}-#{$value} {
+                @each $i in $attr-long {
+                  #{$i}: #{$value}#{"px"} !important;
+                }
+              }
+            } @else {
+              .#{$attr-short}-#{$value} {
+                @each $i in $attr-long {
+                  #{$i}: #{$value}#{"px"} !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    } @else {
+      @media screen and (min-width: $breakpoint-value) {
+        @each $attr-short, $attr-long in $prefixes {
+          @if (
+            $attr-short !=
+              "px" and
+              $attr-short !=
+              "py" and
+              $attr-short !=
+              "mx" and
+              $attr-short !=
+              "my"
+          ) {
+            @each $value in $values {
+              .#{$breakpoint-name}\:#{$attr-short}-#{$value} {
+                #{$attr-long}: #{$value}#{"px"} !important;
+              }
+            }
+          } @else {
+            @each $value in $values {
+              .#{$breakpoint-name}\:#{$attr-short}-#{$value} {
+                @each $i in $attr-long {
+                  #{$i}: #{$value}#{"px"} !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // breakpoint values that not equal to 0
+  }
+}
+
+@mixin make-space-minus(
+  $space-minus-values,
+  $minus-space-prefixes,
+  $breakpoints
+) {
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    // if xs value = 0
+    @if ($breakpoint-value == 0) {
+      @each $attr-short, $attr-long in $minus-space-prefixes {
+        @each $value in $space-minus-values {
+          @if ($breakpoint-name != "all") {
+            .#{$breakpoint-name}\:-#{$attr-short}-#{$value} {
+              #{$attr-long}: -#{$value}#{"px"} !important;
+            }
+          } @else {
+            .-#{$attr-short}-#{$value} {
+              #{$attr-long}: -#{$value}#{"px"} !important;
+            }
+          }
+        }
+      }
+    } @else {
+      @media screen and (min-width: $breakpoint-value) {
+        @each $attr-short, $attr-long in $minus-space-prefixes {
+          @each $value in $space-minus-values {
+            .#{$breakpoint-name}\:-#{$attr-short}-#{$value} {
+              #{$attr-long}: -#{$value}#{"px"} !important;
+            }
+          }
+        }
+      }
+    }
+    // breakpoint values that not equal to 0
+  }
+}
+
+// 포지션 엔진
+$positions: (top, bottom, left, right);
+@mixin make-position($positions, $values, $breakpoints) {
+  @each $breakpoint-name, $breakpoint-value in $breakpoints {
+    // if xs value = 0
+    @if ($breakpoint-value == 0) {
+      @each $position in $positions {
+        @each $name, $value in $values {
+          .#{$position}-#{$name} {
+            #{$position}: #{$value} !important;
+          }
+        }
+      }
+    } @else {
+      @each $position in $positions {
+        @each $name, $value in $values {
+          .#{$breakpoint-name}\:#{$position}-#{$name} {
+            #{$position}: #{$value} !important;
+          }
+        }
+      }
+    }
+  }
+}

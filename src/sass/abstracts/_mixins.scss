@@ -1,0 +1,84 @@
+//★★★ Responsive Tool ★★★ ( 직접 @include 해서 사용하기)
+
+// 사용법
+// .example
+//     background: white
+//     =r(s m t p)              ( Shorthand: r is responsive, s is small, m is mobile, t is tablet, p is PC)
+//         height: 70px
+
+// pc 컨테이너값 및 브레이크 포인트 설정
+$size__site_content_width: 1400px;
+$media_queries: (
+  "s": "only screen and (max-width:480px)",
+  "m": "only screen and (max-width: 767.98px)",
+  "t":
+    "only screen and (min-width: 768px) and (max-width: #{$size__site_content_width - 0.02})",
+  "p": "only screen and (min-width: (#{$size__site_content_width}))",
+);
+// for responsive
+@mixin r($breakpoints) {
+  $conditions: ();
+  @each $breakpoint in $breakpoints {
+    $conditions: append(
+      $conditions,
+      #{inspect(map-get($media_queries, $breakpoint))},
+      comma
+    );
+  }
+
+  @media #{$conditions} {
+    @content;
+  }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// 반응형 (직접 브레이크포인트 기입) ex) +mnw(500)
+@mixin mnw($min-width) {
+  @media only screen and (min-width: $min-width#{px}) {
+    @content;
+  }
+}
+@mixin mxw($max-width) {
+  @media only screen and (max-width: $max-width#{px}) {
+    @content;
+  }
+}
+@mixin mnw-mxw($min-width, $max-width) {
+  @media only screen and(min-width: $min-width#{px}) and (max-width: $max-width#{px}) {
+    @content;
+  }
+}
+
+/* mixin for multiline */
+@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1, $bgColor: white) {
+  overflow: hidden;
+  position: relative;
+  line-height: $lineHeight;
+  max-height: $lineHeight * $lineCount;
+  text-align: justify;
+  margin-right: -1em;
+  padding-right: 1em;
+  &:before {
+    content: "...";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2em;
+    background: $bgColor;
+  }
+}
+
+.block-with-text {
+  @include multiLineEllipsis(
+    $lineHeight: 1.2em,
+    $lineCount: 3,
+    $bgColor: white
+  );
+}

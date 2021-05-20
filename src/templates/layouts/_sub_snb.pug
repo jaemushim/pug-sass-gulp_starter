@@ -1,0 +1,42 @@
+include _setting
+
+block config
+//서브페이지 메뉴
+section.snb
+  .bg
+    .container
+      .txt-wrap
+        block snb__title
+        
+  //현재위치
+  .location-wrap
+    .container
+      .location.cf
+        .home
+          a(href='index.html')
+            img(src='images/common/reuse/home.png' alt='홈으로 가기' title='홈으로 가기 ')
+        each item,index in snvLoc
+          if index < snvLoc.length - 1
+            .dept-1.dept 
+              button(type='button')= item.dept1
+              ul.dept-2    
+                each dept2s in item.dept2
+                  if !dept2s.newPage
+                    li
+                      a(href=dept2s.href)= dept2s.name
+                  else 
+                    li
+                      a(href=dept2s.href target="_blank" title="새창")= dept2s.name
+                        img.newPage-icon.ml-10.mb-3(src='images/common/reuse/newPage.png' alt='')
+          else 
+            .dept-1.dept.on 
+              button(type='button')= item.dept1
+              ul.dept-2    
+                each dept2s in item.dept2
+                  if !dept2s.newPage
+                    li
+                      a(href=dept2s.href)= dept2s.name   
+                  else 
+                    li
+                      a(href=dept2s.href target="_blank" title="새창")= dept2s.name   
+                        img.newPage-icon.ml-10.mb-3(src='images/common/reuse/newPage.png' alt='')

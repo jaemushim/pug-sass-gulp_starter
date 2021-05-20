@@ -1,0 +1,43 @@
+include _setting
+
+block config
+doctype html
+html(lang="ko")
+    head
+        include _head
+    body
+        if pageSort == "main"
+            include _popup
+        #wrapper(class=pageSort)
+            .accessibility
+                a(href="#main") 본문내용 바로가기
+                a(href="#main-nav") 메인메뉴 바로가기
+            .wrapper
+
+            if pageSort == "main"
+                include _header
+            else if pageSort == "sub"
+                include _header
+                include _sub_snb
+
+            // 메인
+            main#main
+                span.sr-only 메인 컨텐츠
+                if pageSort == "sub" 
+                    article(class="text-color-" + text_color)
+                        .container
+                            include _sub_title-sec
+                            if dept4 || dept5
+                                include _sub_dept4and5
+                            // Content      
+                            .cont
+                                block content
+                else
+                    // Content      
+                    .cont
+                        block content
+
+            include _footer
+
+        script(src='js/slider.js')
+        script(src='js/main.js')

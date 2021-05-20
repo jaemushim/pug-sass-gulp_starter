@@ -1,0 +1,435 @@
+.gnb
+    position: relative
+    z-index: 12
+    width: 100%
+    background-color: #fff
+    .container
+        padding: 0 85px
+        max-width: none
+        @media only screen and (max-width:1650px)
+            padding: 0 20px
+        +r(m t)
+            padding: 0 15px
+        >.cf
+            height: 68px
+            +r(p)
+                height: 91px
+            .logo
+                margin-top: 16px
+                +r(m t)
+                    margin-top: 20px
+            .pc-logo
+                display: none
+                +mnw(1519.9)
+                    display: block
+            .m-logo
+                display: none
+                +mxw(1519.9)
+                    display: block
+                +mnw-mxw(1399,1519.9)
+                    margin-top: 10px
+            >.f-right
+                .dept-1
+                    float: left
+                    +r(m t)
+                        display: none
+                        position: absolute
+                        right: 0
+                        top: 68px
+                        z-index: 10
+                        background-color: #f8f8f8
+                        max-width: 450px
+                        min-height: 100vh
+                        padding-top: 90px
+                    @media only screen and (min-width:360px)
+                        min-width: 360px
+                    @media only screen and (max-width:360px)
+                        width: 100%
+                        min-width: auto
+                    &.active
+                        display: block
+
+                    >.dept-1__item
+                        float: left
+                        +r(m t)
+                            float: none
+                            display: block
+                            width: 130px
+                        >a
+                            width: 100%
+                            height: 91px
+                            padding: 0 30px
+                            line-height: 90px
+                            color: #4b4b4b
+                            font-size: 18px
+                            font-weight: bold
+                            +r(m t)
+                                display: inline-block
+                                width: 100%
+                                height: 54px
+                                line-height: 51px
+                                background-color: #252525
+                                border-bottom: 1px solid #ddd
+                                padding: 0 15px
+                                font-weight: 400
+                                font-size: 16px
+                                color: #fff
+                                position: relative
+                                z-index: 10
+                        &.on
+                            .dept-2-wrap
+                                display: block
+                            >a
+                                position: relative
+                                +r(p)
+                                    color: $pri-color
+                            >a:after
+                                +r(p)
+                                    content: ""
+                                    position: absolute
+                                    width: 4px
+                                    height: 4px
+                                    background-color: $pri-color
+                                    border-radius: 50%
+                                    top: 31px
+                                    right: 24px
+                        &:hover
+                            >a
+                                position: relative
+                                +r(p)
+                                    color: $pri-color
+                            >a:after
+                                +r(p)
+                                    content: ""
+                                    position: absolute
+                                    width: 4px
+                                    height: 4px
+                                    background-color: $pri-color
+                                    border-radius: 50%
+                                    top: 31px
+                                    right: 24px
+
+                            .open
+                              //  display: table
+                                +r(m t)
+                                    display: table !important
+                        &.active
+                            >a
+                                +r(m t)
+                                    background-color: $pri-color
+                            .dept-2-wrap,.open
+                                +r(m t)
+                                    display: block !important
+                    .m-search-box // 모바일 검색 박스
+                        position: absolute
+                        z-index: 11
+                        top: 0
+                        left: 0
+                        width: 100%
+                        max-width: 360px
+                        height: 90px
+                        background-color: #f8f8f8
+                        border-bottom: 1px solid #ddd
+                        text-align: center
+                        &__input-wrap
+                            position: relative
+                            top: 50%
+                            transform: translateY(-50%)
+                            input
+                                width: 230px
+                                height: 40px
+                                border-radius: 6px
+                                border: solid 1px #dddddd
+                                background-color: #ffffff
+                                &::placeholder
+                                    color: #a0a0a0
+                                    padding-left: 16px
+                            button
+                                width: 85px
+                                height: 40px
+                                line-height: 37px
+                                border-radius: 6px
+                                border: solid 1px #dddddd
+                                background-color: #454545
+                                vertical-align: top
+                                color: #fff
+                    &:after
+                        +r(m t)
+                            content: ""
+                            position: absolute
+                            display: inline-block
+                            left: 0px
+                            z-index: 2
+                            top: 0
+                            width: 130px
+                            height: 100%
+                            min-height: 100vh
+                            background-color: #252525
+                >.right-dp-2
+                    float: right
+                    margin-left: 17px
+                    +r(p)
+                        height: 91px
+                        line-height: 88px
+
+                    >*
+                        float: left
+                        margin-left: 25px
+                        +r(m b)
+                            margin-left: 0
+                    .lang
+                        cursor: pointer
+                    .m-ham // 모바일 햄버거메뉴
+                        img
+                            +r(m t)
+                                width: 30px
+                                height: 30px
+                            +r(s)
+                                width: 22px
+                                height: 22px
+                        &.active
+                            right: 0px !important
+                            width: 68px
+                            height: 68px
+                            top: 0 !important
+                            background: $pri-color url('../images/common/reuse/close_white.png') center center no-repeat
+                            >img
+                                display: none
+                .dept-2-wrap
+                    position: absolute
+                    z-index: 2
+                    top: 91px
+                    left: 0
+                    width: 100%
+                    background-color: #f8f8f8
+                    display: none
+                    +r(m t)
+                        display: none
+                        right: 0
+                        left: 130px
+                        top: 0
+                        width: auto
+                        padding: 90px 11px 30px
+                        // GNB 수정사항시 table 로 변경하고 수정후 none 하여주세요
+                    li
+                        width: 100%
+                        display: table
+                    .dept-2-wrap__left
+                        position: relative
+                        display: table-cell
+                        vertical-align: top
+                        width: 27%
+                        height: 346px
+                        +r(m t)
+                            display: none
+                        .box
+                            position: absolute
+                            top: 45px
+                            right: 24%
+
+                            span
+                                font-size: 25px
+                                color: $pri-color
+                                font-weight: bold
+                            p
+                                max-width: 180px
+                                margin-top: 8px
+                            img
+                                margin-top: 30px
+
+                    .dept-2
+                        width: 100%
+                        +r(p)
+                            display: table-cell
+                        >.dept-2__item
+                            width: 100%
+                            +r(p)
+                                display: table
+                            &.active
+                                .dept-3
+                                    // display: block // 영준씨 수정부탁사항
+                                >a
+                                    &:after
+                                        transform: rotate(180deg)
+
+                            &:hover
+                                >a
+                                    +r(p)
+                                        background-color: $pri-color
+                            >a
+                                width: 100%
+                                position: relative
+                                vertical-align: middle
+                                height: 100%
+                                border-bottom: 1px solid #555
+                                padding-bottom: 3px
+                                &:after
+                                    +r(m t)
+                                        content: ""
+                                        position: absolute
+                                        top: 45%
+                                        right: 12px
+                                        width: 9px
+                                        height: 6px
+                                        background: url('../images/common/reuse/arrow_down_9-6.png')
+                                +r(p)
+                                    width: 214px
+                                    padding-left: 28px
+                                    line-height: 51px
+                                    display: table-cell
+                                    background-color: #252525
+                                    color: #fff
+                                +r(m t)
+                                    height: 49px
+                                    line-height: 48px
+                                    border-bottom: 1px solid $pri-color
+                            &:first-child
+                                >a
+                                    &:after
+                                        +r(p)
+                                            content: ""
+                                            position: absolute
+                                            z-index: -1
+                                            left: 0
+                                            top: 0
+                                            width: 100%
+                                            height: 347px
+                                            padding-bottom: 0
+                                            background-color: #252525
+                            &:last-child
+                                .dept-3
+                                    +r(m t)
+                                        border-bottom: none
+                            &.newPage,&.hasNotChild
+                                >a
+                                    &:after
+                                        background: none
+                        .dept-3
+                            display: none
+                            background-color: #f8f8f8
+                            border-bottom: 1px solid #ddd
+                            vertical-align: middle
+                            padding: 10px 0
+                            +r(p)
+                                margin-left: -3px
+                                display: table-cell
+                                max-width: 220px
+                            +r(m t)
+                                padding: 16px 0
+
+                            >li
+                                display: inline-block
+                                +r(p)
+                                    margin: 0 4px 0 8px
+                                    max-width: 200px
+                                +r(m t)
+                                    padding: 5px 0
+                                >a
+                                    position: relative
+                                    min-width: 184px
+                                    padding-left: 16px
+                                    word-break: keep-all
+                                    font-size: 14px
+                                    vertical-align: top
+                                    font-weight: 500
+                                    transform: translateY(1px)
+                                    +r(p)
+                                        width: 100%
+                                        box-sizing: content-box
+                                    +r(m t)
+                                        line-height: 1.1
+
+                                    &:before
+                                        content: ""
+                                        position: absolute
+                                        left: 6px
+                                        top: 9px
+                                        width: 4px
+                                        height: 4px
+                                        background-color: $pri-color
+                                        border-radius: 50%
+                                        +r(m t)
+                                            top: 6px
+                                    &:hover
+                                        color: $pri-color
+                                    img:first-child
+                                        +r(m t)
+                                            max-width: 150px
+
+                            &.family
+                                +r(p)
+                                    padding: 8px 0 12px
+                            img
+                                vertical-align: top
+
+    .search-open-wrap
+        position: absolute
+        z-index: 2
+        display: none
+        z-index: 5
+        top: 91px
+        left: 0
+        height: 220px
+        width: 100%
+        background-color: #252525
+        line-height: 1.1
+        &.active
+            display: block
+
+        .input-wrap
+            position: relative
+            top: 50%
+            transform: translateY(-50%)
+            width: 28%
+            margin: 0 auto
+            border-bottom: 2px solid #fff
+            input
+                width: 100%
+                height: 40px
+                color: #fff
+                font-size: 14px
+                font-weight: 350
+                &:focus
+                    padding-left: 10px
+                &::placeholder
+                    color: #fff
+                    font-size: 14px
+                    font-weight: 350
+            button
+                position: absolute
+                top: 8px
+                right: 0
+                width: 20px
+                height: 20px
+    .btn-search
+        +r(m t)
+            display: none
+        &.active
+            width: 92px
+            height: 92px
+            background: #252525 url("../images/common/reuse/close_white.png") center center no-repeat
+            img
+                display: none
+    .lang
+        position: relative
+        +r(m t)
+            display: none
+        &:hover
+            .en
+                display: inline-block
+        .en
+            position: absolute
+            display: none
+            left: -18px
+            top: 35px
+            z-index: 5
+            width: 70px
+            height: 82px
+            line-height: 80px
+            font-size: 18px
+            text-align: center
+            background: url("../images/common/bubble.png") center right no-repeat
+
+// 영준씨 active 클래스 사용중 겹침현상 해결 .dept-2__item.active .dept-3 기존 이부분 display block 해제하고 밑에 대체
+.gnb .dept-1.active .dept-2__item.active .dept-3
+    display: block !important

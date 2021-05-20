@@ -1,0 +1,49 @@
+
+article
+    color: #666
+    h1,h2,h3,h4,h5,h6
+        color: #333
+        font-weight: 500
+    h3
+        position: relative
+        margin-top: 40px
+        margin-bottom: 10px
+        padding-left: 20px
+        font-size: 20px
+        line-height: 1.4
+        &:before
+            content: ""
+            position: absolute
+            top: 7px
+            left: 3px
+            display: inline-block
+            width: 4px
+            height: 15px
+            background-color: $third-color
+            transform: rotate(30deg)
+            margin-right: 16px
+        &.not-list-style
+            padding-left: 0
+            &:before
+                width: 0
+                left: 0
+                margin-right: 0
+    h4
+        margin-top: 30px
+        margin-bottom: 12px
+        font-size: 17px
+        color: #333
+    h5
+        margin-top: 15px
+        margin-bottom: 14px
+        color: #333
+
+table
+    input
+        margin: 2px 0
+    .w-140
+        +r(m)
+            width: calc(100% / 3 - 12px)
+
+h3 ~ h4, h3 ~ img
+    margin-top: 13px

@@ -1,0 +1,82 @@
+footer
+    background-color: #252525
+    color: #ccc
+    padding-bottom: 53px
+    +r(m t)
+        padding-bottom: 0
+        font-size: 13px
+    .container
+        max-width: 1400px
+        margin: 0 auto
+    .footer-nav
+        display: block
+        padding: 20px 0
+        padding-top: 10px !important
+        margin-left: -10px
+        margin-right: -10px
+        overflow: hidden
+        margin-top: -10px
+        +r(m)
+            padding: 27px 0
+        li
+            position: relative
+            display: inline-block
+            margin: 0 10px
+            margin-top: 10px
+            &:after
+                content: "|"
+                position: absolute
+                top: 3px
+                right: -13px
+                font-size: 10px
+                color: #777
+            &:last-child:after
+                content: ""
+            a
+                &:hover
+                    text-decoration: underline
+    .cf
+        padding: 25px 0 50px
+        .footer-logo
+            @media only screen and (min-width:1200px)
+                float: left
+        .content
+            margin: 0 -8px
+            @media only screen and (min-width:1200px)
+                float: left
+                padding-left: 30px
+            @media only screen and (max-width:1200px)
+                margin-top: 25px
+            li
+                display: inline-block
+                margin: 0 8px
+                +r(m)
+        .social
+            position: relative
+            @media only screen and (min-width:1200px)
+                float: right
+            @media only screen and (max-width:1200px)
+                bottom: -20px
+
+            +r(s m)
+                bottom: 14px
+            +r(s )
+                bottom: 34px
+            @media only screen and (min-width:450px) and (max-width:530px)
+                bottom: 40px
+            >li
+                float: left
+
+        .copy
+            +r(m)
+                position: relative
+                bottom: -95px
+                font-size: 12px !important
+                padding-bottom: 20px
+        .footer-logo
+            img
+                display: inline-block
+                @media only screen and (min-width:1200px)
+                    margin-bottom: -22px
+                +r(m)
+                    width: 240px

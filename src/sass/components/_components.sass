@@ -1,0 +1,281 @@
+// 제목 앞에 기울어진 막대기
+.title-icon-red:before
+    content: ""
+    position: relative
+    left: 3px
+    display: inline-block
+    width: 4px
+    height: 15px
+    background-color: $third-color
+    transform: rotate(30deg)
+    margin-right: 16px
+
+// 빨간색 점 (제목 1시방향)
+.dot-point
+    position: relative
+.dot-point:after
+    content: ""
+    position: absolute
+    width: 8px
+    height: 8px
+    background-color: $pri-color
+    border-radius: 50%
+    top: -1px
+    right: -8px
+
+.dot-point-4:after
+    @extend .dot-point
+    width: 4px
+    height: 4px
+
+// 빨간 점 (list style)
+.dot-point-list-style
+    position: relative
+    margin-left: 13px
+    &:before
+        content: ""
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: -13px
+        width: 4px
+        height: 4px
+        background-color: $pri-color
+        border-radius: 50%
+
+// 빨간점 (1시), - 서브페이지 h4 (비젼)
+.dot-point-6:after
+    @extend .dot-point
+    width: 6px
+    height: 6px
+    top: -6px
+    right: -8px
+
+.dept-4-tabs
+    border-collapse: separate
+    .on
+        background-color: #fff
+        color: #333
+        font-weight: 500
+        &:after
+            content: ""
+            position: absolute
+            width: 100%
+            height: 3px
+            background-color: $third-color
+            z-index: 11
+            left: 0
+            top: 0
+    li
+        position: relative
+        a
+            padding: 12px
+.dept-5-tabs
+    font-size: 14px
+    color: #333
+    .on
+        background-color: #454545
+        color: #fff
+
+// 라인 width 60px height 3px third color
+.line-60-3-third
+    width: 60px
+    height: 3px
+    background-color: $third-color
+.line-137-1-gray
+    width: 137px
+    height: 1px
+    background-color: #ddd
+
+// 표
+.th-bg-color-fa
+    th
+        background-color: #fafafa
+.td-text-left
+    td
+        text-align: left
+.table-border
+    word-break: break-all
+    text-align: center
+    border-collapse: collapse
+    th,td
+        padding: 15px 10px
+        border-bottom: 1px solid #ddd
+        border-left: 1px solid #ddd
+        border-right: 1px solid #ddd
+        +r(m)
+            padding: 10px 4px !important
+        +mxw(500)
+            font-size: 14px
+    th
+        color: #444
+        font-weight: normal
+    td
+        color: #666
+
+.table-border-nopadding
+    @extend .table-border
+    th,td
+        padding: 3px 5px
+.table-divline
+    @extend .table-border
+    thead
+    tbody
+.table-divline-hasnottbodyth
+    @extend .table-divline
+    tbody
+.p-15-10
+    th,td
+        padding: 15px 10px
+.p-15-20
+    th,td
+        padding: 15px 20px
+
+ul.list-style-bar
+    >li
+        line-height: 25px
+        padding-left: 10px
+        background: url(../images/common/list_style_bar.gif) no-repeat left top 12px
+p.list-style-bar,li.list-style-bar
+    line-height: 25px
+    padding-left: 10px
+    background: url(../images/common/list_style_bar.gif) no-repeat left top 12px
+ul.list-style-initial
+    padding-left: 20px
+    >li
+        list-style: initial
+ul.list-style-circle
+    padding-left: 20px
+    >li
+        list-style: circle
+ul.list-style-disc
+    padding-left: 20px
+    >li
+        list-style: disc
+.list-style-hangle
+    list-style-type: hangul
+
+ul.list-style-rec
+    >li
+        padding-left: 16px
+        background: url(../images/sub/sub_bg9.gif) no-repeat left 10px
+.mark-color-666
+    li::marker
+        color: #666
+
+.mark-color-333
+    li::marker
+        color: #333
+
+.radio-wrap
+    margin-top: 18px
+    span
+        margin: 0 5px
+        &:first-child
+            margin-left: 0 !important
+        input[type=radio]
+            opacity: 0
+            width: 1px
+            &:checked + label
+                background: url(../images/common/reuse/checkbox_circle_dark.png) no-repeat left center
+
+        label
+            display: inline-block
+            color: #777
+            font-size: 15px
+            height: 15px
+            line-height: 15px
+            padding-left: 22px
+            background: url(../images/common/reuse/checkbox.png) no-repeat left center
+
+a.link
+
+.alert-box
+    display: none
+
+.table-p-7-4
+    th,td
+        padding: 7px 4px
+.table-p-8-15
+    th,td
+        padding: 8px 15px
+        +mxw(480)
+            padding: 8px 5px
+
+// sub-title-banner
+.title-banner
+    .line
+        width: 60px
+        height: 3px
+        background-color: $third-color
+        margin: 0 auto
+        margin-bottom: 25px
+        margin-top: 60px
+        +r(m t)
+            margin-top: 0
+    p
+        line-height: 33px
+        color: #333
+        text-align: center
+        font-size: 25px
+        b
+            font-weight: bold
+    p:last-child
+        margin-bottom: 50px
+    b.text-color-pri
+        font-weight: 500 !important
+    ul:last-child
+        margin-top: 30px
+    .button-wrap
+        margin-top: 30px
+        +r(p)
+            margin-top: 50px
+.manager-box
+    margin-top: 70px
+    border: 1px solid #ddd
+    padding: 25px
+    +r(m)
+        padding: 8px
+        font-size: 14px
+    p
+        color: #333
+        margin-bottom: 5px
+    p:first-child
+        font-weight: 500
+
+#address_1 ~ a, #repoAddress1 ~ a
+    +mxw(768)
+        margin-left: 10px !important
+
+h3 ~ table,h4 ~table
+    margin-top: 16px
+
+// 타이틀배너 적용안된거
+    .pb-50.w-11\/20
+        +r(m t)
+            width: 100% !important
+.dept-4-tabs ~ .my-30
+    +r(m t)
+    display: none !important
+
+.layer-popup-wrap .layer-popup
+    +r(m t)
+        left: 50% !important
+        top: 50% !important
+        transform: translate(-50%,-50%)
+    +r(m)
+        width: 97% !important
+        left: 0
+    .cont
+        +r(m)
+            padding: 14px !important
+
+// 폼 연락처 반응형
+.bbs-wrap #sb5-in2,
+.bbs-wrap #popularHp2,
+.bbs-wrap #popularHp3
+    width: calc(33% - 18px)
+.bbs-wrap .px-5
+    padding-left: 3px !important
+.bbs-wrap select.px-5
+    padding-left: 0 !important

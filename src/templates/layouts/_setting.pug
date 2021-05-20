@@ -1,0 +1,541 @@
+// 메뉴구조도 (snb, header, sitemap 에 뿌려짐)
+- 
+    var menu = 
+    {             
+        dp1:[
+                {name:"메뉴1",  href:"biz_sale_smry_smry.html",
+                    dp2:[
+                            {name:"메뉴1의 메뉴2", href:"biz_pub_edu_center.html", 
+                                dp3:[
+                                        {name:"메뉴1의 메뉴2의 메뉴3",href:"biz_prom_infra_cult.html",
+                                            dp4:[
+                                                    {name:"메뉴1의 메뉴2의 메뉴3의 메뉴4", href:"biz_prom_infra_cult.html",
+                                                        dp5:[
+                                                                {name:"메뉴1의 메뉴2의 메뉴3의 메뉴4의 메뉴5", href:"biz_prom_infra_guide_pub.html",
+                                                                    dp6:[
+                                                                            {name:"메뉴1의 메뉴2의 메뉴3의 메뉴4의 메뉴5의 메뉴6", href:"biz_prom_infra_guide_pub.html"},
+                                                                        ]
+                                                                },
+                                                            ]
+                                                    },
+                                                ]
+                                        },
+                                    ]
+                            },
+                        ]
+                },
+                
+                
+            ],
+        sitemap:{name:"사이트맵",  href:"sitemap.html",
+            dp2:[{name:"사이트맵", href:"sitemap.html"}]},
+        search:{name:"통합검색",  href:"search.html",
+            dp2:[{name:"통합검색", href:"search.html"}]},
+        ops:{name:"이용안내",
+            dp2:[
+                    {name:"개인정보처리방침", href:"ops_privacy_curr.html",
+                        dp3:[
+                                {name:"현재 적용지침", href:"ops_privacy_curr.html"},
+                            ],
+                    },
+                    {name:"영상정보처리기기 운영·관리 방침", href:"ops_video.html"},
+                    {name:"이메일무단수집거부", href:"ops_email.html"},
+                    {name:"저작권정책", href:"ops_copy.html"},
+                    {name:"뷰어다운로드", href:"ops_viewer.html"},
+                    {name:"Contact Us", href:"ops_contact.html"},
+                ]
+            }
+    };
+
+
+// 예시
+- 
+    //- var menu = 
+    //- {             
+    //-     dp1:[
+    //-             {name:"기관소개",  href:"com_int_vision.html",
+    //-                 dp2:[
+    //-                         {name:"kobaco 소개",href:"com_int_vision.html",
+    //-                             dp3:[
+    //-                                     {name:"비전",href:"com_int_vision.html"},       
+    //-                                     {name:"CI",href:"com_int_CI.html"},
+    //-                                     {name:"CEO",href:"com_int_CEO.html"},
+    //-                                     {name:"조직도",href:"com_int_org.html"},
+    //-                                     {name:"임원진",href:"com_int_direct.html"},
+    //-                                     {name:"사업소개",href:"com_int_biz_sale.html",
+    //-                                         dp4:[
+    //-                                                 {name:"방송광고영업", href:"com_int_biz_sale.html"},
+    //-                                                 {name:"영업IT인프라", href:"com_int_biz_infra_digit.html",
+    //-                                                     dp5:[
+    //-                                                             {name:"Digital kobaco", href:"com_int_biz_infra_digit.html"},
+    //-                                                             {name:"KOBAnet", href:"com_int_biz_infra_kobanet.html"},
+    //-                                                             {name:"KODEX", href:"com_int_biz_infra_kodex.html"},
+    //-                                                         ]
+    //-                                                 },
+    //-                                                 {name:"중소기업지원", href:"com_int_biz_small.html"},
+    //-                                                 {name:"광고진흥", href:"com_int_biz_prom.html"},
+    //-                                                 {name:"공익광고", href:"com_int_biz_pub.html"}, 
+    //-                                                 {name:"사회공헌사업", href:"com_int_biz_ctb.html"},         
+    //-                                             ]
+    //-                                     },
+    //-                                 ]
+    //-                         },
+    //-                         {name:"유관기관현황", href:"com_rel_bcast.html",
+    //-                             dp3:[
+    //-                                     {name:"방송사현황", href:"com_rel_bcast.html"},
+    //-                                     {name:"광고회사현황", href:"com_rel_comp_head_ga.html",
+    //-                                         dp4:[
+    //-                                                 {name:"본사", href:"com_rel_comp_head_a.html"},
+    //-                                                 {name:"부산지사", href:"com_rel_comp_Busan.html"},
+    //-                                                 {name:"대구지사", href:"com_rel_comp_Daegu.html"},
+    //-                                                 {name:"광주지사", href:"com_rel_comp_Gwangju.html"},
+    //-                                                 {name:"대전지사", href:"com_rel_comp_Daejeon.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"유관언론단체현황", href:"com_rel_press.html"},
+    //-                                 ]
+    //-                         },
+    //-                         {name:"오시는 길", href:"com_map_head.html", 
+    //-                             dp3:[
+    //-                                     {name:"kobaco 본사", href:"com_map_head.html"},
+    //-                                     {name:"한국광고문화회관", href:"com_map_culture.html"},
+    //-                                     {name:"방송회관", href:"com_map_hall.html"},
+    //-                                     {name:"kobaco 연수원", href:"com_map_center.html"},
+    //-                                 ]
+    //-                         },
+    //-                         {name:"사이버홍보실", href:"com_ad_news.html",
+    //-                             dp3:[
+    //-                                     {name:"kobaco 뉴스", href:"com_ad_news.html"},
+    //-                                     {name:"홍보동영상", href:"com_ad_video_2009_5.html"},
+    //-                                     {name:"연례보고서", href:"com_ad_repo.html"},
+    //-                                     {name:"광고일번지", href:"com_ad_repo_1st.html"},
+    //-                                 ]
+    //-                         }
+    //-                     ]
+    //-             },
+                
+    //-             {name:"열린경영",  href:"oper_dsc_explan_evid.html", 
+    //-                 dp2:[
+    //-                         {name:"경영공시",href:"oper_dsc_explan_evid.html",
+    //-                             dp3:[
+    //-                                     {name:"경영공시란?",href:"oper_dsc_explan_evid.html",
+    //-                                         dp4:[
+    //-                                                 {name:"소개 및 시행근거",href:"oper_dsc_explan_evid.html"},
+    //-                                                 {name:"항목별 공시담당",href:"oper_dsc_explan_mgr.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"경영공시열람",href:"oper_dsc_read.html"},
+    //-                                 ]
+    //-                         },
+    //-                         {name:"윤리경영",href:"oper_ethic_charter.html",
+    //-                             dp3:[
+    //-                                     {name:"윤리경영 슬로건 및 윤리헌장",href:"oper_ethic_charter.html"},
+    //-                                     {name:"인권경영선언문",href:"oper_ethic_declare.html"},
+    //-                                     {name:"행동강령",href:"oper_ethic_policy.html"},
+    //-                                     {name:"신고센터",href:"oper_ethic_report_intro.html",
+    //-                                         dp4:[
+    //-                                                 {name:"Clean 신고센터 소개",href:"oper_ethic_report_intro.html"},
+    //-                                                 {name:"위반행위신고",href:"oper_ethic_report_violate.html"},
+    //-                                                 {name:"공익신고 소개",href:"oper_ethic_report_pub-intro.html"},
+    //-                                                 {name:"공익신고하기",href:"oper_ethic_report_pub-report.html"},
+    //-                                                 {name:"예산낭비신고센터",href:"oper_ethic_report_waste.html"},
+    //-                                                 {name:"갑질피해신고센터",href:"oper_ethic_report_bossy.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"청렴계약제",href:"oper_ethic_report_contract.html"},
+    //-                                     {name:"청령 옴부즈만",href:"oper_ethic_ombudsman.html"},
+    //-                                     {name:"반부패 청렴 관련 자료",href:"oper_ethic_data.html"},
+    //-                                 ]
+    //-                         },
+    //-                         {name:"사업실명제",href:"oper_real-name_explan.html", 
+    //-                             dp3:[
+    //-                                     {name:"사업실명제란?",href:"oper_real-name_explan.html"},
+    //-                                     {name:"대상사업",href:"oper_real-name_biz.html"},
+    //-                                 ]},
+    //-                         {name:"안전경영",href:"oper_safe_policy.html",
+    //-                             dp3:[
+    //-                                     {name:"안전경영방침",href:"oper_safe_policy.html"},
+    //-                                     {name:"안전보건 예방목표",href:"oper_safe_goal.html"},
+    //-                                     {name:"안전보건경영",href:"oper_safe_oper.html"},
+    //-                                     {name:"안전경영위원회",href:"oper_safe_cmte.html"},
+    //-                                     {name:"기타 안전보건관리",href:"oper_safe_else.html"},
+    //-                                 ],
+    //-                         },
+    //-                     ]
+    //-             },
+    //-             {name:"주요사업",  href:"biz_sale_smry_smry.html",
+    //-                 dp2:[
+    //-                         {name:"방송광고영업",href:"biz_sale_smry_smry.html",
+    //-                             dp3:[
+    //-                                     {name:"방송광고 영업 개요", href:"biz_sale_smry_smry.html", 
+    //-                                         dp4:[
+    //-                                                 {name:"영업개요", href:"biz_sale_smry_smry.html"},    
+    //-                                                 {name:"대행매체 현황", href:"biz_sale_smry_agency.html"},    
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"방송광고 판매 프로세스", href:"biz_sale_process.html"},
+    //-                                     {name:"방송광고 판매유형 및 방식", href:"biz_sale_type-way_tv-radio_type.html",
+    //-                                         dp4:[
+    //-                                                 {name:"지상파TV 및 라디오", href:"biz_sale_type-way_tv-radio_type.html",
+    //-                                                     dp5:[
+    //-                                                             {name:"방송광고 유형", href:"biz_sale_type-way_tv-radio_type.html"},
+    //-                                                             {name:"방송광고 판매방식", href:"biz_sale_type-way_tv-radio_way.html"},
+    //-                                                         ]
+    //-                                                 },
+    //-                                                 {name:"뉴미디어", href:"biz_sale_type-way_media_dmb.html",
+    //-                                                     dp5:[
+    //-                                                             {name:"지상파DMB", href:"biz_sale_type-way_media_dmb.html"},
+    //-                                                             {name:"IPTV 광고판매", href:"biz_sale_type-way_media_iptv.html"},
+    //-                                                             {name:"해외광고대행", href:"biz_sale_type-way_media_cross.html"},
+    //-                                                         ]
+    //-                                                 },
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"신규광고회사 방송광고 거래", href:"biz_sale_guide_cunsult.html",
+    //-                                         dp4:[
+    //-                                                 {name:"방송광고상담", href:"biz_sale_guide_cunsult.html"},
+    //-                                                 {name:"계약안내", href:"biz_sale_guide_guide_guide.html",
+    //-                                                     dp5:[
+    //-                                                             {name:"계약안내", href:"biz_sale_guide_guide_guide.html"},
+    //-                                                             {name:"계약안내 동영상", href:"biz_sale_guide_guide_video.html"},
+    //-                                                             {name:"세금계산서 발행안내 동영상", href:"biz_sale_guide_guide_tax-video.html"},
+    //-                                                         ]
+    //-                                                 },
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"방송광고인프라", href:"biz_sale_infra_kobanet.html",
+    //-                                         dp4:[
+    //-                                                 {name:"KOBAnet", href:"biz_sale_infra_kobanet.html"},
+    //-                                                 {name:"KODEX", href:"biz_sale_infra_kodex.html"},
+    //-                                                 {name:"방송광고 심의관리시스템", href:"biz_sale_infra_system.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"관련법률및약관", href:"biz_sale_law.html"},
+    //-                                 ]
+    //-                         },
+    //-                         {name:"중소기업지원", href:"biz_prom_small_90.html",
+    //-                             dp3:[
+    //-                                     {name:"중소기업지원사업", href:"biz_prom_small_90.html",
+    //-                                         dp4:[
+    //-                                                 {name:"지역밀착형 방송광고 활성화 기반구축", href:"biz_prom_small_90.html"},
+    //-                                                 {name:"중소기업 방송광고 활성화 지원", href:"biz_prom_small_50.html"},
+    //-                                                 {name:"혁신형 중소기업 방송광고 지원", href:"biz_prom_small_70.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"kobaco 중소기업방송광고지원", href:"https://www.kobaco.co.kr/smad/", newPage:"true"},
+    //-                                 ]
+    //-                         },
+    //-                         {name:"광고진흥", href:"biz_pub_edu_center.html", 
+    //-                             dp3:[
+    //-                                     {name:"광고교육", href:"biz_pub_edu_center.html",
+    //-                                         dp4:[
+    //-                                                 {name:"광고교육원", href:"biz_pub_edu_center.html"},
+    //-                                                 {name:"도서관", href:"biz_pub_edu_lib.html"},
+    //-                                                 {name:"박물관", href:"biz_pub_edu_mus.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"인프라지원사업",href:"biz_prom_infra_cult.html",
+    //-                                         dp4:[
+    //-                                                 {name:"광고문화회관", href:"biz_prom_infra_cult.html",
+    //-                                                     dp5:[
+    //-                                                             {name:"광고문화회관 소개", href:"biz_prom_infra_cult.html"},
+    //-                                                             {name:"임대 및 시설 이용 안내", href:"biz_prom_infra_guide_pub.html",
+    //-                                                                 dp6:[
+    //-                                                                         {name:"공익시설", href:"biz_prom_infra_guide_pub.html"},
+    //-                                                                         {name:"편의시설", href:"biz_prom_infra_guide_facil.html"},
+    //-                                                                         {name:"근린생활시설", href:"biz_prom_infra_guide_living.html"},
+    //-                                                                         {name:"업무시설", href:"biz_prom_infra_guide_task.html"},
+    //-                                                                     ]
+    //-                                                             },
+    //-                                                         ]
+    //-                                                 },
+    //-                                                 {name:"연수원", href:"biz_prom_infra_center.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"디지털혁신사업",href:"biz_prom_innov.html"},
+    //-                                 ]    
+    //-                         },
+    //-                         {name:"공익광고",href:"biz_pub_ad_explan.html",
+    //-                             dp3:[
+    //-                                     {name:"공익광고", href:"biz_pub_ad_explan.html",
+    //-                                         dp4:[
+    //-                                                 {name:"공익광고란", href:"biz_pub_ad_explan.html"},
+    //-                                                 {name:"공익광고 자료실", href:"biz_pub_ad_data_bcast.html",
+    //-                                                     dp5:[
+    //-                                                             {name:"방송 공익광고", href:"biz_pub_ad_data_bcast.html"},
+    //-                                                             {name:"인쇄 공익광고", href:"biz_pub_ad_data_bcast.html"},
+    //-                                                             {name:"웹툰 공익광고", href:"biz_pub_ad_data_bcast.html"},
+    //-                                                             {name:"공익광고 이용신청안내", href:"biz_pub_ad_data_guide.html"},
+    //-                                                             {name:"저작물 이용신청서", href:"biz_pub_ad_data_app.html"},
+    //-                                                         ]
+    //-                                                 },
+    //-                                                 {name:"공익광고 국민제안", href:"biz_pub_ad_suggest.html"},
+    //-                                                 {name:"대한민국 공익광고제", href:"biz_pub_ad_event_contest.html",
+    //-                                                     dp5:[
+    //-                                                             {name:"공익광고 공모전", href:"biz_pub_ad_event_contest.html"},
+    //-                                                             {name:"공익광고제 역대수상작", href:"biz_pub_ad_event_award_adult.html",
+    //-                                                                 dp6:[
+    //-                                                                         {name:"일반부", href:"biz_pub_ad_event_award_adult.html"},
+    //-                                                                         {name:"대학생", href:"biz_pub_ad_event_award_college.html"},
+    //-                                                                         {name:"청소년", href:"biz_pub_ad_event_award_adole.html"},
+    //-                                                                     ]
+    //-                                                             },
+    //-                                                             {name:"공익광고제 갤러리", href:"biz_pub_ad_event_gallery.html"},
+    //-                                                         ]
+    //-                                                 },
+    //-                                                 {name:"공익광고 데이터 광장", href:"biz_pub_ad_data.html",newPage:"true"},
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"공익광고 PAIE", href:"biz_pub_paie_guide.html",
+    //-                                         dp4:[
+    //-                                                 {name:"2020년 공익광고 활용교육(PAIE) 신청 안내", href:"biz_pub_paie_guide.html"},
+    //-                                                 {name:"2020년 PAIE 수기공모", href:"biz_pub_paie_contest.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                 ]
+    //-                         },
+    //-                         {name:"사회공헌사업",href:"biz_ctb_intro.html",
+    //-                             dp3:[
+    //-                                     {name:"사회공헌사업소개", href:"biz_ctb_intro.html"},
+    //-                                     {name:"고유업무 기반", href:"biz_ctb_base.html"},
+    //-                                     {name:"BroAd Service", href:"biz_ctb_service.html"},
+    //-                                     {name:"맞춤형 사회공헌", href:"biz_ctb_custom.html"},
+    //-                                     {name:"지역캠페인", href:"biz_ctb_camp.html"},
+    //-                                     {name:"활동소식", href:"biz_ctb_news.html"},
+    //-                                 ]
+    //-                         },
+    //-                         // 개편요청으로 인하여 보류
+    //-                         //{name:"광고 표준화사업",href:"biz_stand_back.html",
+    //-                         //    dp3:[
+    //-                         //            {name:"광고 표준화사업 개요", href:"biz_stand_back.html",
+    //-                         //                dp4:[
+    //-                         //                        {name:"추진배경", href:"biz_stand_back.html"},
+    //-                         //                        {name:"추진필요성", href:"biz_stand_need.html"},
+    //-                         //                        {name:"대상영역", href:"biz_stand_area.html"},
+    //-                         //                    ]
+    //-                         //            },
+    //-                         //        ]
+    //-                         //},
+    //-                     ]
+    //-             },
+    //-             {name:"정보마당",  href:"info_news.html", 
+    //-                 dp2:[   
+    //-                         {name:"공지사항", href:"info_news.html", hasNotChild:"true"},
+    //-                         {name:"입찰정보", href:"info_bid_plan.html",
+    //-                             dp3:[
+    //-                                     {name:"발주계획", href:"info_bid_plan.html"},
+    //-                                     {name:"입찰공고", href:"info_bid_ann.html"},
+    //-                                     {name:"수의계약현황", href:"info_bid_private.html"},
+    //-                                     {name:"청렴계약제", href:"info_bid_integrity_intro.html", 
+    //-                                         dp4:[
+    //-                                             {name:"청렴계약제란", href:"info_bid_integrity_intro.html"},
+    //-                                             {name:"이행특수조건", href:"info_bid_integrity_require.html"},
+    //-                                             {name:"이행계약서", href:"info_bid_integrity_contract.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                 ]
+    //-                         },
+    //-                         {name:"채용정보", href:"info_hire_info_guide.html",
+    //-                             dp3:[
+    //-                                     {name:"채용안내", href:"info_hire_info_guide.html",
+    //-                                         dp4:[
+    //-                                                 {name:"채용정보", href:"info_hire_info_guide.html",
+    //-                                                     dp5:[
+    //-                                                             {name:"신입사원 채용공고", href:"info_hire_info_guide.html"}
+    //-                                                         ]
+    //-                                                 },
+    //-                                                 {name:"인재상", href:"info_hire_info_talent.html"},
+    //-                                                 {name:"인사/복리후생", href:"info_hire_info_benefit.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"채용 Q&A", href:"info_hire_QA.html"},
+    //-                                 ],
+    //-                         },
+    //-                         {name:"공공데이터 개방", href:"info_data-open_list.html",
+    //-                             dp3:[
+    //-                                     {name:"공개정보리스트",href:"info_data-open_list.html"},
+    //-                                 ]
+    //-                         },
+    //-                         {name:"정보공개", href:"info_dsc_guide_intro.html",
+    //-                             dp3:[
+    //-                                     {name:"정보공개제도 안내", href:"info_dsc_guide_intro.html",
+    //-                                         dp4:[
+    //-                                                 {name:"정보공개제도란", href:"info_dsc_guide_intro.html"},
+    //-                                                 {name:"업무처리절차", href:"info_dsc_guide_step.html"},
+    //-                                                 {name:"공개대상기관", href:"info_dsc_guide_inst.html"},
+    //-                                                 {name:"비공개되는 정보", href:"info_dsc_guide_private.html"},
+    //-                                                 {name:"정보공개방법", href:"info_dsc_guide_method.html"},
+    //-                                                 {name:"불복 구제절차방법", href:"info_dsc_guide_disobey.html"},
+    //-                                                 {name:"수수료 안내", href:"info_dsc_guide_fee.html"},
+    //-                                                 {name:"관련법 및 공통자료", href:"info_dsc_guide_law.html"},
+    //-                                             ],
+    //-                                     },
+    //-                                     {name:"정보공개청구", href:"https://www.open.go.kr/com/main/mainView.do", newPage:"true"},
+    //-                                     {name:"비공개세부기준", href:"info_dsc_stand.html"},
+    //-                                     {name:"정보공개 FAQ", href:"info_dsc_faq.html"},
+    //-                                     {name:"정보공개게시판", href:"info_dsc_bbs.html"},
+    //-                                     {name:"사규 제,개정 예고", href:"info_dsc_bbs.html"},
+    //-                                 ]
+    //-                         },
+    //-                         {name:"사전정보공개", href:"info_pre-rlse_explan.html", 
+    //-                             dp3:[
+    //-                                 {name:"사전정보공개란?", href:"info_pre-rlse_explan.html",
+    //-                                     dp4:[
+    //-                                             {name:"감사윤리",href:"info_pre-rlse_favor_1.html"},
+    //-                                             {name:"기획,재무,법무",href:"info_pre-rlse_favor_1.html"},
+    //-                                             {name:"인사,총무",href:"info_pre-rlse_favor_1.html"},
+    //-                                             {name:"회계",href:"info_pre-rlse_favor_1.html"},
+    //-                                             {name:"정보화,홍보",href:"info_pre-rlse_favor_1.html"},
+    //-                                             {name:"외부평가",href:"info_pre-rlse_favor_1.html"},
+    //-                                             {name:"사업,기타",href:"info_pre-rlse_favor_1.html"},
+    //-                                         ]
+    //-                                 },
+    //-                                 {name:"즐겨찾는 사전정보", href:"info_pre-rlse_favor_1.html"},
+    //-                                 {name:"주제별 사전정보", href:"info_pre-rlse_topic.html"},
+    //-                                 ]
+    //-                         },
+    //-                         {name:"미디어 연구/조사 자료", href:"https://adstat.kobaco.co.kr/" ,newPage:"true",
+    //-                             dp3:[
+    //-                                     {name:"미디어 및 광고 관련 통계/연구 자료 DB",href:"https://adstat.kobaco.co.kr/", fontSize:"15px" ,newPage:"true"},
+    //-                                 ]
+    //-                         },
+    //-                     ]
+    //-             },
+    //-             {name:"고객마당",  href:"cust_service_satisfy.html", 
+    //-                 dp2:[
+    //-                         {name:"고객서비스헌장",  href:"cust_service_satisfy.html",
+    //-                             dp3:[
+    //-                                     {name:"고객만족헌장",  href:"cust_service_satisfy.html"},
+    //-                                     {name:"서비스이행표준",  href:"cust_service_standard_common.html",
+    //-                                         dp4:[
+    //-                                                 {name:"공통표준",  href:"cust_service_standard_sale.html"},
+    //-                                                 {name:"방송광고영업",  href:"cust_service_standard_sale.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                 ]
+    //-                         },
+    //-                         {name:"고객참여",  href:"cust_parti_bbs.html",
+    //-                             dp3:[
+    //-                                     {name:"고객제안",  href:"cust_parti_bbs.html",
+    //-                                         dp4:[
+    //-                                                 {name:"고객제안게시판",  href:"cust_parti_bbs.html"},
+    //-                                                 {name:"고객제안안내",  href:"cust_parti_guide.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                 ]
+    //-                         },
+    //-                         {name:"사이버신문고",  href:"cust_cyber.html", hasNotChild:"true"},
+    //-                         {name:"핫라인",  href:"cust_hotLine.html" ,hasNotChild:"true"},
+    //-                         {name:"익명신고센터",  href:"cust_k-whistle.html",hasNotChild:"true"},
+    //-                         {name:"통합FAQ",  href:"cust_FAQ.html", hasNotChild:"true"},
+    //-                         {name:"통합게시판",  href:"cust_bbs.html" ,hasNotChild:"true"},
+    //-                         {name:"공익광고 고객의견",  href:"biz_pub_ad_suggest.html", hasNotChild:"true"},
+    //-                         {name:"안전신문고",  href:"https://safetyreport.go.kr/api?apiKey=B552898780ZOBLJ1LRND60QB1RE", newPage:"true"},
+    //-                     ]
+    //-             },
+    //-             {name:"FAMILY SITES",  href:"family_inst_lab_intro.html",
+    //-                 dp2:[
+    //-                         {name:"부설기관",  href:"family_inst_lab_intro.html",
+    //-                             dp3:[
+    //-                                     {name:"미디어광고연구소",  href:"family_inst_lab_intro.html",
+    //-                                         dp4:[
+    //-                                                 {name:"미디어광고연구소소개",  href:"family_inst_lab_intro.html"},
+    //-                                                 {name:"연구위원소개",  href:"family_inst_lab_member_bjg.html",
+    //-                                                     dp5:[
+    //-                                                             {name:"박종구 연구위원",  href:"family_inst_lab_member_bjg.html"},
+    //-                                                             {name:"성윤택 연구위원",  href:"family_inst_lab_member_syt.html"},
+    //-                                                             {name:"강신규 연구위원",  href:"family_inst_lab_member_gsg.html"},
+    //-                                                             {name:"권예지 연구위원",  href:"family_inst_lab_member_gyj.html"},
+    //-                                                         ]
+    //-                                                 },
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"kobaco 광고교육원", href:"https://edu.kobaco.co.kr/", newPage:"true"},
+    //-                                     {name:"kobaco 연수원", href:"https://kobaco.co.kr/hrd/kobaco_hrd/index.jsp", newPage:"true"},
+    //-                                     {name:"kobaco 광고도서관", href:"https://adlib.kobaco.co.kr/ws/kobaco.jsp?w2xPath=/kobaco_library/common/index.xml", newPage:"true"},
+    //-                                     {name:"kobaco 광고박물관", href:"https://www.kobaco.co.kr/site/admuseum/home", newPage:"true"},
+    //-                                     {name:"kobaco 통계시스템", href:"https://adstat.kobaco.co.kr/", newPage:"true"},
+    //-                                     {name:"kobaco 중소기업방송광고지원", href:"https://www.kobaco.co.kr/smad/", newPage:"true"},
+    //-                                     {name:"kobaco 광고문화회관", href:"https://www.kobaco.co.kr/site/adbro/home", newPage:"true"},
+    //-                                 ]
+    //-                         },
+    //-                         {name:"부산지사",  href:"family_busan_intro.html",
+    //-                             dp3:[
+    //-                                     {name:"부산지사",  href:"family_busan_intro.html",
+    //-                                         dp4:[
+    //-                                                 {name:"지사소개",  href:"family_busan_intro.html"},
+    //-                                                 {name:"지사게시판",  href:"info_news.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"경남지소",  href:"family_Gyeongnam_intro.html",
+    //-                                         dp4:[
+    //-                                                 {name:"지소소개",  href:"family_Gyeongnam_intro.html"},
+    //-                                                 {name:"지소게시판",  href:"info_news.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                 ]
+    //-                         },
+    //-                         {name:"대구지사",  href:"family_Daegu_intro.html",
+    //-                             dp3:[
+    //-                                     {name:"대구지사",  href:"family_Daegu_intro.html",
+    //-                                         dp4:[
+    //-                                                 {name:"지사소개",  href:"family_Daegu_intro.html"},
+    //-                                                 {name:"지사게시판",  href:"info_news.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                 ]
+    //-                         },
+    //-                         {name:"광주지사",  href:"family_Gwangju_intro.html",
+    //-                             dp3:[
+    //-                                     {name:"광주지사",  href:"family_Gwangju_intro.html",
+    //-                                         dp4:[
+    //-                                                 {name:"지사소개",  href:"family_Gwangju_intro.html"},
+    //-                                                 {name:"지사게시판",  href:"info_news.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                     {name:"전북지소",  href:"family_Jeonbuk_intro.html",
+    //-                                         dp4:[
+    //-                                                 {name:"지소소개",  href:"family_Jeonbuk_intro.html"},
+    //-                                                 {name:"지소게시판",  href:"info_news.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                 ]
+    //-                         },
+    //-                         {name:"대전지사",  href:"family_Daejeon_intro.html",
+    //-                             dp3:[
+    //-                                     {name:"대전지사",  href:"family_Daejeon_intro.html",
+    //-                                         dp4:[
+    //-                                                 {name:"지사소개",  href:"family_Daejeon_intro.html"},
+    //-                                                 {name:"지사게시판",  href:"info_news.html"},
+    //-                                             ]
+    //-                                     },
+    //-                                 ]
+    //-                         },
+    //-                     ]
+    //-             },
+                
+    //-         ],
+    //-     sitemap:{name:"사이트맵",  href:"sitemap.html",
+    //-         dp2:[{name:"사이트맵", href:"sitemap.html"}]},
+    //-     search:{name:"통합검색",  href:"search.html",
+    //-         dp2:[{name:"통합검색", href:"search.html"}]},
+    //-     ops:{name:"이용안내",
+    //-         dp2:[
+    //-                 {name:"개인정보처리방침", href:"ops_privacy_curr.html",
+    //-                     dp3:[
+    //-                             {name:"현재 적용지침", href:"ops_privacy_curr.html"},
+    //-                             {name:"19.06.03 ~ 20.06.24", href:"ops_privacy_200624.html"},
+    //-                             {name:"18.09.14 ~ 19.06.03", href:"ops_privacy_190603.html"},
+    //-                             {name:"18.06.06 ~ 18.09.14", href:"ops_privacy_180914.html"},
+    //-                             {name:"18.03.14 ~ 18.06.06",  href:"ops_privacy_180606.html"},
+    //-                             {name:"18.03.14 이전 적용지침", href:"ops_privacy_180314.html"},
+    //-                         ],
+    //-                 },
+    //-                 {name:"영상정보처리기기 운영·관리 방침", href:"ops_video.html"},
+    //-                 {name:"이메일무단수집거부", href:"ops_email.html"},
+    //-                 {name:"저작권정책", href:"ops_copy.html"},
+    //-                 {name:"뷰어다운로드", href:"ops_viewer.html"},
+    //-                 {name:"Contact Us", href:"ops_contact.html"},
+    //-             ]
+    //-         }
+    //- };

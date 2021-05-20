@@ -1,0 +1,74 @@
+.biz_pub_ad_explan
+    .box
+        margin-top: 30px
+        margin-bottom: 60px
+        h4
+            width: 140px
+            height: 140px
+            color: $pri-color
+            border-radius: 100%
+            text-align: center
+            margin: 0 auto
+            border: 1px solid $pri-color
+            display: table
+            border-collapse: separate
+            strong
+                display: table-cell
+                vertical-align: middle
+        .f-left,.f-right
+            width: 49%
+            +mxw(500)
+                width: 48.5%
+            ul
+                li
+                    position: relative
+                    display: table
+                    width: 100%
+                    height: 60px
+                    margin-top: 30px
+                    text-align: center
+                    box-sizing: border-box
+                    border-radius: 4px
+                    border: 1px solid $pri-color
+                    background-color: #fff
+                    &:before
+                        content: ""
+                        position: absolute
+                        top: -20px
+                        left: 50%
+                        width: 16px
+                        height: 9px
+                        background: url(../images/common/reuse/down_pri_22-15.png) no-repeat center /100% 100%
+                        transform: translateX(-50%)
+
+                    p
+                        display: table-cell
+                        vertical-align: middle
+                        padding: 5px
+                        color: $pri-color
+                        font-weight: 500
+
+        .f-right
+            h4
+                border-style: dashed
+                border-color: #666
+                color: #666
+
+            ul
+                li
+                    background-color: #f8f8f8
+                    border: none !important
+                    &:before
+                        background: url(../images/common/reuse/down_gray_22-15.png) no-repeat center /100% 100%
+                    &:after
+                        position: absolute
+                        left: -24px
+                        top: 50%
+                        background: #535d62
+                        width: 24px
+                        height: 1px
+                        content: ""
+                        z-index: -1
+
+                p
+                    color: #666 !important

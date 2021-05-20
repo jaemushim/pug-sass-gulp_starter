@@ -1,0 +1,191 @@
+.biz_pub_ad_data
+    .sorting-box
+        height: 260px
+        background-color: #fafafa
+        border: 1px solid #ddd
+        +mxw(791)
+            height: auto
+            margin-bottom: 80px
+        .search-wrap
+            width: 100%
+            min-height: 60px
+            line-height: 54px
+            border-bottom: 1px solid #ddd
+            +mxw(796)
+                line-height: 42px
+            span:not(:last-child)
+                display: inline-block
+                width: 180px !important
+                margin-right: 5px !important
+                margin-left: 0 !important
+                +mxw(791)
+                    width: calc(50% - 3px) !important
+                    margin-right: 0 !important
+                +mxw(432)
+                    width: 100% !important
+                select
+                    +mxw(791)
+                        width: 100% !important
+            span:first-child
+                +mxw(791)
+                    margin-right: 5px !important
+                select
+                    margin-right: 0 !important
+                    margin-left: 0 !important
+                    +r(m)
+                        margin-left: 0 !important
+            +mxw(876)
+                height: auto !important
+            select,input
+                +mxw(432)
+                    width: 100% !important
+            select
+                margin-right: 5px
+            input
+                +mxw(876)
+                margin-left: 0 !important
+                width: 365px !important
+                +mxw(791)
+                    width: 100% !important
+                +mxw(432)
+                    width: 100% !important
+        .left,.right
+            min-height: 200px
+            +mxw(791)
+                float: none
+                display: inline-block
+            >div:first-child
+                text-align: center
+        .left
+            width: 40% !important
+            border-right: none !important
+            float: left
+            +mxw(791)
+                width: 50% !important
+            li
+                +mxw(791)
+                    width: 100% !important
+            .viewport
+                +mxw(400)
+                    padding: 15px 0 !important
+                button
+                    +mxw(400)
+                        padding: 0 0 4px 15px !important
+            >div:first-child
+                background-color: #454545
+                color: #fff
+                min-height: 28px
+                line-height: 27px
+        .right
+            width: 60%
+            border-left: 1px solid #ddd
+            +mxw(791)
+                width: 50% !important
+                min-height: 289.8px
+            li
+                +mxw(791)
+                    width: 100% !important
+                    font-size: 14px !important
+
+            .viewport
+                +mxw(791)
+                    padding: 20px !important
+                +mxw(400)
+                    padding: 15px !important
+                label
+                    +mxw(400)
+                        margin-left: 0 !important
+            >div:first-child
+                background-color: #ddd
+                color: #333
+                min-height: 28px
+                line-height: 27px
+
+        .btn-search
+            +mxw(791)
+                right: 0 !important
+                bottom: -54px !important
+
+    ul.latest
+        height: 230px
+        border: 1px solid #a0a0a0
+        margin-top: 37px
+        margin-bottom: 20px
+        padding: 30px
+        +mxw(1200)
+            padding: 15px
+            height: auto
+        li
+            width: 50%
+            float: left
+            +r(m)
+                width: 100%
+            .table
+                .table-cell
+                    width: 50%
+                    vertical-align: middle
+                    text-align: left
+                    &:nth-of-type(2)
+                        padding: 0 10px 10px
+                    img
+                        width: 260px
+                        height: 170px
+                    +mxw(480)
+                        width: 100%
+                        display: block!important
+                        text-align: center
+
+        li:first-child
+            +r(m)
+                margin-bottom: 20px
+    .figure
+        li
+            position: relative
+            float: left
+            display: table
+            background-color: #f8f8f8
+            width: 140px
+            height: 140px
+            &:after
+                content: ""
+                position: absolute
+                width: 8px
+                height: 14px
+                top: 45%
+                right: -20px
+                background: url(../images/common/reuse/next_8-14_black.png)
+            &:last-child
+                border: 2px solid $third-color
+                border-radius: 6px
+                border-collapse: separate
+                background-color: #fff
+                &:after
+                    height: 0
+            p
+                display: table-cell
+                text-align: center
+
+// .agree-box
+.agree-box
+    padding: 30px
+    margin-top: 30px
+    background-color: #f6f6f6
+    text-align: center
+    .radio-wrap
+        margin-top: 18px
+        span
+            margin: 0 15px
+        input[type=radio]
+            opacity: 0
+            &:checked + label
+                background: url(../images/common/reuse/checkbox_circle_dark.png) no-repeat left center
+
+        label
+            display: inline-block
+            color: #777
+            font-size: 15px
+            height: 15px
+            line-height: 15px
+            vertical-align: top
+            padding-left: 22px
+            background: url(../images/common/reuse/checkbox.png) no-repeat left center

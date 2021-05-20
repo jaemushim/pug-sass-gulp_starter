@@ -1,0 +1,32 @@
+include _setting
+
+block config
+// dept-4 버튼
+ul.dept-4-tabs.table.w-full.text-center.border-collapse
+    each item, index in dept4 ? dept4 : []
+        if !item.newPage
+            if index != dept4_on
+                li.table-cell.border-1-ddd(class= "w-"+ dept4_width)
+                    a.w-full(href=item.href) !{item.name}
+            else
+                // on
+                li.on.table-cell.border-1-ddd(class= "w-"+ dept4_width)
+                    a.w-full(href=item.href) !{item.name}
+        else
+            li.table-cell.border-1-ddd(class= "w-"+ dept4_width)
+                    a.w-full(href=item.href target="_blank" title="새창")= item.name
+                        img.newPage-icon.ml-10(src='images/common/reuse/newPage.png' alt='')
+hr.my-20(class="lg:my-20")
+
+if dept5
+    // dept-5 버튼
+    ul.dept-5-tabs.table.w-full.text-center.border-collapse.bg-fff
+        each item, index in dept5 ? dept5 : []
+            if index != dept5_on    
+                li.table-cell.border-1-ddd(class= "w-"+ dept5_width)
+                    a.w-full.p-10(href=item.href)= item.name
+            else
+                // on
+                li.on.table-cell.border-1-ddd(class= "w-"+ dept5_width)
+                    a.w-full.p-10(href=item.href)= item.name
+    hr.my-20.invisible

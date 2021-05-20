@@ -1,0 +1,541 @@
+// 심재무의 CSS 프레임워크
+// @author 코드명인 퍼블리셔팀 심재무
+// @since  2021-03-06 created
+
+// ★★★ Utilities Engine ★★★ (클래스 생성기)
+// !! Settings      (make-class 에서 @include 의 맨 마지막 argument 에 true는 반응형 sm:xxx,md:xxx 생성 여부 입니다.)
+
+$null: null;
+
+// 반응형 브레이크 포인트 설정
+$grid-breakpoints-custom: (
+  // Extra small screen / phone (ALL)
+  all: 0,
+  // Small screen / phone
+  sm: 480px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 1400px
+) !default;
+$breakpoints: $grid-breakpoints-custom;
+
+// display 값 설정
+$display-values: (
+  block,
+  inline-block,
+  inline,
+  flex,
+  table,
+  table-cell,
+  none
+) !default;
+@include make-class($null, "display", $display-values, $breakpoints, true);
+
+// float 설정
+$float-values: (none, left, right) !default;
+@include make-class("f", "float", $float-values, $breakpoints, true);
+
+// Justify Content 값 설정
+$display-values: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  space-between: space-between,
+) !default;
+@include make-class($null, "display", $display-values, $breakpoints, true);
+
+// position 값 설정
+$position-values: (fixed, absolute, relative, sticky, static) !default;
+@include make-class($null, "position", $position-values, $breakpoints, true);
+
+// Top / Right / Bottom / Left 값 설정
+$values: (
+  0: 0px,
+  5: 5px,
+  15: 15px,
+  20: 20px,
+  25: 25px,
+  100: 100px,
+);
+@include make-position($positions, $values, $breakpoints);
+
+// Width 설정
+$width-values: (
+  auto: auto,
+  full: 100%,
+  9#{\/}10: 90%,
+  4#{\/}5: 80%,
+  7#{\/}10: 70%,
+  2#{\/}3: 66.66%,
+  3#{\/}5: 60%,
+  1#{\/}2: 50%,
+  11#{\/}20: 55%,
+  9#{\/}20: 45%,
+  2#{\/}5: 40%,
+  1#{\/}3: 33.33%,
+  3#{\/}10: 33.33%,
+  1#{\/}4: 25%,
+  1#{\/}5: 20%,
+  1#{\/}6: 16.66%,
+  1#{\/}7: 14.27%,
+  1#{\/}8: 12.5%,
+  1#{\/}10: 10%,
+);
+@include make-class("w", "width", $width-values, $breakpoints, true);
+
+// margin, padding 값 설정
+$space-values: (
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  7,
+  8,
+  10,
+  12,
+  15,
+  18,
+  20,
+  25,
+  30,
+  35,
+  40,
+  45,
+  50,
+  60,
+  70,
+  80,
+  120
+) !default;
+$space-minus-values: (40, 30, 25, 20, 18, 15, 10, 5, 4, 3, 2, 1);
+$space-prefixes: (
+  px: (
+    padding-left,
+    padding-right,
+  ),
+  py: (
+    padding-top,
+    padding-bottom,
+  ),
+  mx: (
+    margin-left,
+    margin-right,
+  ),
+  my: (
+    margin-top,
+    margin-bottom,
+  ),
+  p: padding,
+  pt: padding-top,
+  pr: padding-right,
+  pb: padding-bottom,
+  pl: padding-left,
+  m: margin,
+  mt: margin-top,
+  mr: margin-right,
+  mb: margin-bottom,
+  ml: margin-left,
+) !default;
+$minus-space-prefixes: (
+  p: padding,
+  pt: padding-top,
+  pr: padding-right,
+  pb: padding-bottom,
+  pl: padding-left,
+  m: margin,
+  mt: margin-top,
+  mr: margin-right,
+  mb: margin-bottom,
+  ml: margin-left,
+) !default;
+@include make-space($space-values, $space-prefixes, $breakpoints);
+@include make-space-minus(
+  $space-minus-values,
+  $minus-space-prefixes,
+  $breakpoints
+);
+
+// Border Bottom 설정
+$border-bottom-values: (
+  b-1-000: 1px solid #000,
+  b-1-333: 1px solid #333,
+  b-1-ccc: 1px solid #ccc,
+  b-1-ddd: 1px solid #ddd,
+  b-1-fff: 1px solid #fff,
+  b-2-333: 2px solid #333,
+  b-2-222: 2px solid #222,
+  b-1-dash-666: 1px dashed #666,
+  b-1-pri: 1px solid $pri-color,
+  b-2-pri: 2px solid $pri-color,
+) !default;
+@include make-class(
+  "border",
+  "border-bottom",
+  $border-bottom-values,
+  $breakpoints,
+  false
+);
+
+// Border  설정
+$border-values: (
+  "1-000": 1px solid #000,
+  "1-333": 1px solid #333,
+  1-ccc: 1px solid #ccc,
+  1-ddd: 1px solid #ddd,
+  b-fff: 1px solid #fff,
+) !default;
+@include make-class("border", "border", $border-values, $breakpoints, false);
+
+// font size 값 설정
+$font-size-values: (
+  0: 0,
+  12: 12px,
+  13: 13px,
+  14: 14px,
+  15: 15px,
+  16: 16px,
+  18: 18px,
+  20: 20px,
+  22: 22px,
+  24: 24px,
+  26: 26px,
+  28: 28px,
+  30: 30px,
+  32: 32px,
+  34: 34px,
+  36: 36px,
+  38: 38px,
+  40: 40px,
+) !default;
+@include make-class("text", "font-size", $font-size-values, $breakpoints, true);
+
+// 폰트 컬러 설정
+$font-color-values: (
+  "000": #000,
+  222: #222,
+  333: #333,
+  444: #444,
+  555: #555,
+  666: #666,
+  777: #777,
+  999: #999,
+  aaa: #aaa,
+  ccc: #ccc,
+  eee: #eee,
+  fff: #fff,
+) !default;
+@include make-class(
+  "text-color",
+  "color",
+  $font-color-values,
+  $breakpoints,
+  false
+);
+
+// 폰트 굵기 설정
+$font-weight-values: (
+  light: 300,
+  normal: 400,
+  medium: 500,
+  bold: 700,
+) !default;
+@include make-class(
+  "font",
+  "font-weight",
+  $font-weight-values,
+  $breakpoints,
+  false
+);
+
+// Text Align 설정
+$text-align-values: (left, center, right);
+@include make-class(
+  "text",
+  "text-align",
+  $text-align-values,
+  $breakpoints,
+  true
+);
+
+// Line height 설정
+$line-height-values: (
+  0: 0,
+  normal: 1.1,
+  15: 15px,
+  20: 20px,
+  22: 22px,
+  25: 25px,
+  30: 30px,
+  33: 33px,
+  40: 40px,
+) !default;
+@include make-class(
+  "lh",
+  "line-height",
+  $line-height-values,
+  $breakpoints,
+  false
+);
+
+// Else
+.h-full {
+  height: 100%;
+}
+
+.hr-10 {
+  margin-top: 10px;
+}
+.hr-15 {
+  margin-top: 15px;
+}
+.hr-20 {
+  margin-top: 20px;
+}
+.hr-25 {
+  margin-top: 25px;
+}
+.hr-30 {
+  margin-top: 30px;
+}
+.w-200 {
+  width: 200px;
+}
+
+.left-dp-2 {
+  float: left;
+}
+.right-dp-2 {
+  float: right;
+}
+.m-auto {
+  margin: 0 auto;
+}
+
+.bg-f4f4f4 {
+  background-color: #f4f4f4;
+}
+.bg-f8f8f8 {
+  background-color: #f8f8f8;
+}
+.translate--y {
+  transform: translateY(-50%);
+}
+.position-center {
+  transform: translate(-50%, -50%);
+}
+.top-50 {
+  top: 50%;
+}
+.right-20 {
+  right: 20px;
+}
+////
+.height-full {
+  height: 100%;
+}
+.invisible {
+  visibility: hidden;
+}
+
+.bg-color-ddd {
+  background-color: #ddd;
+}
+.bg-fff,
+.bg-color-fff {
+  background-color: #fff;
+}
+.bg-fa {
+  background-color: #fafafa;
+}
+.bg-color-fa {
+  background-color: #fafafa;
+}
+.bg-color-45 {
+  background-color: #454545;
+}
+.border-collapse {
+  border-collapse: collapse;
+}
+.word-break {
+  word-break: break-all !important;
+}
+
+.min-h-40 {
+  min-height: 40px;
+}
+.max-w-150 {
+  max-width: 150px !important;
+}
+.max-w-201 {
+  max-width: 201px !important;
+}
+.line {
+  height: 1px;
+}
+.line-1-ddd {
+  height: 1px;
+  background-color: #ddd;
+}
+.line-1-ccc {
+  height: 1px;
+  background-color: #ddd;
+}
+.line-1-333 {
+  height: 1px;
+  background-color: #333;
+}
+.line-h2 {
+  height: 2px;
+}
+.letter-spacing--5 {
+  letter-spacing: -0.5px;
+}
+.letter-spacing--8 {
+  letter-spacing: -0.8px;
+}
+.max-w-360 {
+  max-width: 360px;
+}
+.align-middle {
+  vertical-align: middle;
+}
+.align-bottom {
+  vertical-align: bottom;
+}
+
+.align-top {
+  vertical-align: top;
+}
+
+.rounded-6 {
+  border-radius: 6px;
+}
+.border-circle {
+  border-radius: 100%;
+}
+.h-40 {
+  height: 40px;
+}
+.h-54 {
+  height: 54px;
+}
+.w-376 {
+  width: 376px;
+  @include mxw(760) {
+    width: 100%;
+  }
+}
+
+.w-170 {
+  width: 170px;
+}
+.w-140 {
+  width: 140px;
+}
+.border-t-2-pri {
+  border-top: 2px solid $pri-color;
+}
+.h-220 {
+  height: 220px;
+}
+.-top-50 {
+  top: -50px;
+}
+.-top-100 {
+  top: -100px;
+}
+.f-left {
+  float: left;
+}
+.f-right {
+  float: right;
+}
+.table-cell {
+  vertical-align: middle;
+}
+.text-color-error {
+  color: #ff0000;
+}
+.border-l-1-dash-ccc {
+  border-left: 1px dashed #ccc;
+}
+.max-w-full {
+  max-width: 100%;
+}
+.sm\:w-1\/2-10 {
+  @include mnw(480) {
+    width: calc(50% - 10px) !important;
+  }
+}
+.text-hide {
+  text-indent: -2999px;
+}
+
+.border-1-pri{
+    border: 1px solid $pri-color
+}
+.text-color-pri{
+    color: $pri-color !important
+}
+.bg-color-pri{
+    background-color: $pri-color !important
+}
+
+.text-color-second{
+    color: $secon-color !important
+}
+.bg-color-second{
+    background-color: $secon-color !important
+}
+
+.text-color-third{
+    color: $third-color !important
+}
+.bg-color-third{
+    background-color: $third-color !important
+}
+
+.text-color-title {
+    color: $title-color !important
+}
+.bg-color-title{
+    background-color: $title-color !important
+}
+
+.text-color-brown{
+    color: $brown-color !important
+}
+.bg-color-brown{
+    background-color: $brown-color !important
+}
+
+.text-color-navy{
+    color: $navy-color !important
+}
+.bg-color-navy{
+    background-color: $navy-color !important
+}
+
+.text-color-semi-dark{
+    color: $semi-dark-color !important
+}
+.bg-color-semi-dark{
+    background-color: $semi-dark-color !important
+}
+
+.text-color-green{
+    color: $green-color !important
+}
+.bg-color-green{
+    background-color: $green-color !important
+}
+
+.text-color-blue{
+    color: $blue-color !important
+}
+.bg-color-blue{
+    background-color: $blue-color !important
+}
