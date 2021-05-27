@@ -3,7 +3,7 @@
 sass/
 |
 |– abstracts/ (or utilities/) <br>
-|   |– _variables.scss    // Sass Variables <br>
+|()   |– _variables.scss    // Sass Variables <br>
 |   |– _functions.scss    // Sass Functions <br>
 |   |– _mixins.scss       // Sass Mixins <br>
 | <br>
