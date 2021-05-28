@@ -1,0 +1,132 @@
+<!-- 메뉴구조도 (snb, header, sitemap 에 뿌려짐)-->
+<!-- 예시-->
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0 height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes"
+/>-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="ㅇㅇㅇ회사">
+  <meta name="description" content="ㅇㅇㅇ회사 description">
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="shortcut icon" href="favicon.ico">
+  <title>회사명칭</title><!-- PreLoad-->
+  <link rel="preload" href="images/common/bubble.png" as="image" /><!-- Link CSS-->
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/main.css"><!-- Link Jquery-->
+  <script src="js/lib/jquery-3.5.1.min.js"></script>
+  <script src="js/lib/jquery-ui.js"></script><!-- Link Swiper-->
+  <script src="js/lib/slick.min.js"></script>
+  <script src="js/lib/html5shiv.min.js"></script>
+</head>
+
+<body>
+  <div class="main" id="wrapper">
+    <div class="accessibility"><a href="#main">본문내용 바로가기</a><a href="#main-nav">메인메뉴 바로가기</a></div>
+    <div class="wrapper"></div><!-- 메뉴구조도 (snb, header, sitemap 에 뿌려짐)-->
+    <!-- 예시-->
+    <!-- 헤더-->
+    <header>
+      <!-- GNB-->
+      <div class="gnb">
+        <div class="container">
+          <div class="cf">
+            <h1 class="f-left logo"><a href="index.html"><img class="pc-logo" src="images/logoOn.png" alt="ㅇㅇㅇ회사"><img class="m-logo" src="images/mLogo.png" alt="ㅇㅇㅇ회사"></a></h1>
+            <div class="f-right">
+              <div class="left-dp-2" id="main-nav">
+                <ul class="dept-1 cf">
+                  <li class="m-search-box block lg:none">
+                    <div class="m-search-box__input-wrap">
+                      <form action=""><input type="text" placeholder="검색어를 입력하세요" title="검색어를 입력하세요"><button type="submit">검색</button></form>
+                    </div>
+                  </li><!-- 홈은 모바일에서 만 보여짐, newPage 추가시 링크이동 가능 // active 클래스 추가시 dept-2 보여줌-->
+                  <li class="active dept-1__item newPage lg:none"><a href="index.html">홈</a></li>
+                  <li class="dept-1__item"><a href="biz_sale_smry_smry.html">메뉴1</a>
+                    <ul class="dept-2-wrap">
+                      <li>
+                        <div class="dept-2-wrap__left">
+                          <div class="box"><span>메뉴1</span>
+                            <p>Lorem sdfsdfsd<img src="images/main/allmenu_img1.png" alt=""></p>
+                          </div>
+                        </div>
+                        <ul class="dept-2">
+                          <li class="dept-2__item"><a href="biz_pub_edu_center.html">메뉴1의 메뉴2</a>
+                            <ul class="dept-3">
+                              <li><a href="biz_prom_infra_cult.html">메뉴1의 메뉴2의 메뉴3</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="dept-1__item newPage lg:none"><a href="">영문사이트</a></li>
+                </ul>
+              </div>
+              <ul class="right-dp-2">
+                <li><button class="btn-search" type="button"><img src="images/common/reuse/search.png" alt="검색하기"></button>
+                  <div class="search-open-wrap ml-0">
+                    <div class="input-wrap">
+                      <form><input type="text" placeholder="검색어를 입력해주세요" title="검색어를 입력하세요"><button type="submit"><img src="images/common/reuse/search_white.png" alt="검색하기"></button></form>
+                    </div>
+                  </div>
+                </li>
+                <li><span class="lang"><button type="button"><img src="images/lang.png" alt="언어선택"></button><span class="en"><a href="">EN</a></span></span></li>
+                <li><a class="sitemap none lg:inline-block" href="sitemap.html" title="사이트맵으로 이동"><img src="images/siteMap.png" alt="사이트맵"></a><button class="m-ham absolute right-15 top-25 lh-normal lg:none" type="button" title="모바일 메뉴"><img src="images/m-ham.png" alt="모바일 메뉴"></button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header><!-- 메인-->
+    <main id="main"><span class="sr-only">메인 컨텐츠</span><!-- Content      -->
+      <div class="cont">
+        <!-- 섹션 1 (메인 비쥬얼)-->
+        <section class="section-1"></section>
+      </div>
+    </main><!-- 푸터-->
+    <footer class="footer">
+      <div class="for-border border-b-1-333">
+        <div class="container">
+          <ul class="footer-nav">
+            <li><a class="text-color-fff font-bold" href="">개인정보처리방침</a></li>
+            <li><a href="">이메일무단수집거부</a></li>
+            <li><a href="">방송광고 판매대행 약관</a></li>
+            <li><a href="">저작권정책</a></li>
+            <li><a href="">정부24</a></li>
+            <li><a href="">복지·부조금 부정 신고센터</a></li>
+            <li><a href="">CLEAN 신고센터</a></li>
+            <li><a href="">뷰어다운로드</a></li>
+            <li><a href="">찾아오시는길</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container">
+        <div class="cf">
+          <div class="footer-logo"><a href=""><img src="images/common/logo_footer.png" alt="한국방송광고진흥공사"></a></div>
+          <ul class="content">
+            <li>서울시 중구 ㅇㅇㅇㅇ</li>
+            <li>대표전화 : 02-731-0000</li>
+            <li>이메일 :ㅇㅇㅇ@kobaco.co.kr</li>
+            <li class="block mt-3">
+              <div class="copy text-14">COPYRIGHT (C) KOREA BROADCAST ADVERTISING CORP. ALL RIGHTS
+                RESERVED.</div>
+            </li>
+          </ul>
+          <ul class="social">
+            <li><a href=""><img src="images/common/facebook.png" alt="ㅇㅇㅇ 페이스북을 새창으로 열기"></a></li>
+            <li><a href=""><img class="ml-15" src="images/common/blog.png" alt="ㅇㅇㅇ 네이버 블로그를 새창으로 열기"></a></li>
+          </ul>
+        </div>
+      </div><button class="btn-top-quick"><img class="mt-15" src="images/common/reuse/prev_white.png" alt=""><span>TOP</span></button>
+    </footer>
+  </div>
+  <script src="js/slider.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

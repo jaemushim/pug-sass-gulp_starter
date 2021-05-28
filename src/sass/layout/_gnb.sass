@@ -429,7 +429,18 @@
             font-size: 18px
             text-align: center
             background: url("../images/common/bubble.png") center right no-repeat
-
+    .dept-2__item
+        .newPage-icon
+            margin-left: 5px
+            margin-bottom: 2px
+        +r(m t)
+            margin-bottom: 3px
+    .dept-3
+        .newPage-icon
+            vertical-align: middle !important
+            margin-left: 3px
+        +r(m t)
+            margin-bottom: 3px
 // 영준씨 active 클래스 사용중 겹침현상 해결 .dept-2__item.active .dept-3 기존 이부분 display block 해제하고 밑에 대체
 .gnb .dept-1.active .dept-2__item.active .dept-3
     display: block !important

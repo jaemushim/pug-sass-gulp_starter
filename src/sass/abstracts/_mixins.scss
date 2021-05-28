@@ -6,8 +6,6 @@
 //     =r(s m t p)              ( Shorthand: r is responsive, s is small, m is mobile, t is tablet, p is PC)
 //         height: 70px
 
-// pc 컨테이너값 및 브레이크 포인트 설정
-$size__site_content_width: 1400px;
 $media_queries: (
   "s": "only screen and (max-width:480px)",
   "m": "only screen and (max-width: 767.98px)",
