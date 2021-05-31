@@ -17,21 +17,21 @@
             @if ($value) {
               @if ($breakpoint-name != "all") {
                 .#{$breakpoint-name}\:#{$class-first-name}-#{$name} {
-                  #{$property-name}: #{$value} !important;
+                  #{$property-name}: #{$value};
                 }
               } @else {
                 .#{$class-first-name}-#{$name} {
-                  #{$property-name}: #{$value} !important;
+                  #{$property-name}: #{$value};
                 }
               }
             } @else {
               @if ($breakpoint-name != "all") {
                 .#{$breakpoint-name}\:#{$class-first-name}-#{$name} {
-                  #{$property-name}: #{$name} !important;
+                  #{$property-name}: #{$name};
                 }
               } @else {
                 .#{$class-first-name}-#{$name} {
-                  #{$property-name}: #{$name} !important;
+                  #{$property-name}: #{$name};
                 }
               }
             }
@@ -39,21 +39,21 @@
             @if ($value) {
               @if ($breakpoint-name != "all") {
                 .#{$breakpoint-name}\:#{$name} {
-                  #{$property-name}: #{$value} !important;
+                  #{$property-name}: #{$value};
                 }
               } @else {
                 .#{$name} {
-                  #{$property-name}: #{$value} !important;
+                  #{$property-name}: #{$value};
                 }
               }
             } @else {
               @if ($breakpoint-name != "all") {
                 .#{$breakpoint-name}\:#{$name} {
-                  #{$property-name}: #{$name} !important;
+                  #{$property-name}: #{$name};
                 }
               } @else {
                 .#{$name} {
-                  #{$property-name}: #{$name} !important;
+                  #{$property-name}: #{$name};
                 }
               }
             }
@@ -68,21 +68,21 @@
               @if ($value) {
                 @if ($breakpoint-name != "all") {
                   .#{$breakpoint-name}\:#{$class-first-name}-#{$name} {
-                    #{$property-name}: #{$value} !important;
+                    #{$property-name}: #{$value};
                   }
                 } @else {
                   .#{$class-first-name}-#{$name} {
-                    #{$property-name}: #{$value} !important;
+                    #{$property-name}: #{$value};
                   }
                 }
               } @else {
                 @if ($breakpoint-name != "all") {
                   .#{$breakpoint-name}\:#{$class-first-name}-#{$name} {
-                    #{$property-name}: #{$name} !important;
+                    #{$property-name}: #{$name};
                   }
                 } @else {
                   .#{$class-first-name}-#{$name} {
-                    #{$property-name}: #{$name} !important;
+                    #{$property-name}: #{$name};
                   }
                 }
               }
@@ -90,21 +90,21 @@
               @if ($value) {
                 @if ($breakpoint-name != "all") {
                   .#{$breakpoint-name}\:#{$name} {
-                    #{$property-name}: #{$value} !important;
+                    #{$property-name}: #{$value};
                   }
                 } @else {
                   .#{$name} {
-                    #{$property-name}: #{$value} !important;
+                    #{$property-name}: #{$value};
                   }
                 }
               } @else {
                 @if ($breakpoint-name != "all") {
                   .#{$breakpoint-name}\:#{$name} {
-                    #{$property-name}: #{$name} !important;
+                    #{$property-name}: #{$name};
                   }
                 } @else {
                   .#{$name} {
-                    #{$property-name}: #{$name} !important;
+                    #{$property-name}: #{$name};
                   }
                 }
               }
@@ -118,21 +118,21 @@
       @if ($class-first-name) {
         @if ($value) {
           .#{$class-first-name}-#{$name} {
-            #{$property-name}: #{$value} !important;
+            #{$property-name}: #{$value};
           }
         } @else {
           .#{$class-first-name}-#{$name} {
-            #{$property-name}: #{$name} !important;
+            #{$property-name}: #{$name};
           }
         }
       } @else {
         @if ($value) {
           .#{$name} {
-            #{$property-name}: #{$value} !important;
+            #{$property-name}: #{$value};
           }
         } @else {
           .#{$name} {
-            #{$property-name}: #{$name} !important;
+            #{$property-name}: #{$name};
           }
         }
       }
@@ -161,11 +161,11 @@
           @each $value in $values {
             @if ($breakpoint-name != "all") {
               .#{$breakpoint-name}\:#{$attr-short}-#{$value} {
-                #{$attr-long}: #{$value}#{"px"} !important;
+                #{$attr-long}: #{$value}#{"px"};
               }
             } @else {
               .#{$attr-short}-#{$value} {
-                #{$attr-long}: #{$value}#{"px"} !important;
+                #{$attr-long}: #{$value}#{"px"};
               }
             }
           }
@@ -174,13 +174,13 @@
             @if ($breakpoint-name != "all") {
               .#{$breakpoint-name}\:#{$attr-short}-#{$value} {
                 @each $i in $attr-long {
-                  #{$i}: #{$value}#{"px"} !important;
+                  #{$i}: #{$value}#{"px"};
                 }
               }
             } @else {
               .#{$attr-short}-#{$value} {
                 @each $i in $attr-long {
-                  #{$i}: #{$value}#{"px"} !important;
+                  #{$i}: #{$value}#{"px"};
                 }
               }
             }
@@ -202,14 +202,14 @@
           ) {
             @each $value in $values {
               .#{$breakpoint-name}\:#{$attr-short}-#{$value} {
-                #{$attr-long}: #{$value}#{"px"} !important;
+                #{$attr-long}: #{$value}#{"px"};
               }
             }
           } @else {
             @each $value in $values {
               .#{$breakpoint-name}\:#{$attr-short}-#{$value} {
                 @each $i in $attr-long {
-                  #{$i}: #{$value}#{"px"} !important;
+                  #{$i}: #{$value}#{"px"};
                 }
               }
             }
@@ -239,11 +239,11 @@
           @each $value in $values {
             @if ($breakpoint-name != "all") {
               .#{$breakpoint-name}\:-#{$attr-short}-#{$value} {
-                #{$attr-long}: -#{$value}#{"px"} !important;
+                #{$attr-long}: -#{$value}#{"px"};
               }
             } @else {
               .-#{$attr-short}-#{$value} {
-                #{$attr-long}: -#{$value}#{"px"} !important;
+                #{$attr-long}: -#{$value}#{"px"};
               }
             }
           }
@@ -252,13 +252,13 @@
             @if ($breakpoint-name != "all") {
               .#{$breakpoint-name}\:-#{$attr-short}-#{$value} {
                 @each $i in $attr-long {
-                  #{$i}: -#{$value}#{"px"} !important;
+                  #{$i}: -#{$value}#{"px"};
                 }
               }
             } @else {
               .-#{$attr-short}-#{$value} {
                 @each $i in $attr-long {
-                  #{$i}: -#{$value}#{"px"} !important;
+                  #{$i}: -#{$value}#{"px"};
                 }
               }
             }
@@ -280,14 +280,14 @@
           ) {
             @each $value in $values {
               .#{$breakpoint-name}\:-#{$attr-short}-#{$value} {
-                #{$attr-long}: -#{$value}#{"px"} !important;
+                #{$attr-long}: -#{$value}#{"px"};
               }
             }
           } @else {
             @each $value in $values {
               .#{$breakpoint-name}\:-#{$attr-short}-#{$value} {
                 @each $i in $attr-long {
-                  #{$i}: -#{$value}#{"px"} !important;
+                  #{$i}: -#{$value}#{"px"};
                 }
               }
             }
@@ -308,7 +308,7 @@ $positions: (top, bottom, left, right);
       @each $position in $positions {
         @each $name, $value in $values {
           .#{$position}-#{$name} {
-            #{$position}: #{$value} !important;
+            #{$position}: #{$value};
           }
         }
       }
@@ -316,7 +316,7 @@ $positions: (top, bottom, left, right);
       @each $position in $positions {
         @each $name, $value in $values {
           .#{$breakpoint-name}\:#{$position}-#{$name} {
-            #{$position}: #{$value} !important;
+            #{$position}: #{$value};
           }
         }
       }

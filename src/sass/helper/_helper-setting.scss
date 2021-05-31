@@ -335,11 +335,11 @@ $line-height-values: (
   visibility: hidden;
 }
 .bg-color-ddd {
-  background-color: #ddd !important;
+  background-color: #ddd;
 }
 
 .bg-color-fff {
-  background-color: #fff !important;
+  background-color: #fff;
 }
 .bg-f4 {
   background-color: #f4f4f4;
@@ -348,16 +348,16 @@ $line-height-values: (
   background-color: #f8f8f8;
 }
 .bg-color-fa {
-  background-color: #fafafa !important;
+  background-color: #fafafa;
 }
 .bg-color-45 {
-  background-color: #454545 !important;
+  background-color: #454545;
 }
 .border-collapse {
-  border-collapse: collapse !important;
+  border-collapse: collapse;
 }
 .word-break {
-  word-break: break-all !important;
+  word-break: break-all;
 }
 
 .line {
@@ -408,10 +408,10 @@ $line-height-values: (
   border-collapse: separate;
 }
 .border-t-none {
-  border-top: none !important;
+  border-top: none;
 }
 .border-b-none {
-  border-bottom: none !important;
+  border-bottom: none;
 }
 .border-1-pri {
   border: 1px solid $pri-color;
@@ -420,64 +420,64 @@ $line-height-values: (
   border-top: 2px solid $pri-color;
 }
 .text-color-pri {
-  color: $pri-color !important;
+  color: $pri-color;
 }
 .bg-color-pri {
-  background-color: $pri-color !important;
+  background-color: $pri-color;
 }
 
 .text-color-second {
-  color: $secon-color !important;
+  color: $secon-color;
 }
 .bg-color-second {
-  background-color: $secon-color !important;
+  background-color: $secon-color;
 }
 
 .text-color-third {
-  color: $third-color !important;
+  color: $third-color;
 }
 .bg-color-third {
-  background-color: $third-color !important;
+  background-color: $third-color;
 }
 
 .text-color-title {
-  color: $title-color !important;
+  color: $title-color;
 }
 .bg-color-title {
-  background-color: $title-color !important;
+  background-color: $title-color;
 }
 
 .text-color-brown {
-  color: $brown-color !important;
+  color: $brown-color;
 }
 .bg-color-brown {
-  background-color: $brown-color !important;
+  background-color: $brown-color;
 }
 
 .text-color-navy {
-  color: $navy-color !important;
+  color: $navy-color;
 }
 .bg-color-navy {
-  background-color: $navy-color !important;
+  background-color: $navy-color;
 }
 
 .text-color-semi-dark {
-  color: $semi-dark-color !important;
+  color: $semi-dark-color;
 }
 .bg-color-semi-dark {
-  background-color: $semi-dark-color !important;
+  background-color: $semi-dark-color;
 }
 
 .text-color-green {
-  color: $green-color !important;
+  color: $green-color;
 }
 .bg-color-green {
-  background-color: $green-color !important;
+  background-color: $green-color;
 }
 
 .text-color-blue {
-  color: $blue-color !important;
+  color: $blue-color;
 }
 .bg-color-blue {
-  background-color: $blue-color !important;
+  background-color: $blue-color;
 }
